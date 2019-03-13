@@ -177,6 +177,7 @@ background: #1976d2;
 .footer {
 	margin: 0px;
 	padding: 0px;
+  bottom:0px;
 }
 
 .footer_container {
@@ -203,10 +204,14 @@ background: #1976d2;
 	margin-bottom: 8px;
 	clear: left;
 	color: #949798;
+  display:inline-block;
 }
 
 .footer ul li a {
-	text-decoration: none;
+    color: #fff;
+    background: #1976d2;
+    padding: 5px 10px;
+    border-radius: 2px;
 }
 		
 #kutu:last-child li {
