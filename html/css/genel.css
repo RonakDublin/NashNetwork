@@ -583,3 +583,45 @@ background: #1976d2;
 }
 
 .card-oy{
+    background: #29bbf3;
+    color: #fff;
+    padding: 1px 9px;
+    display: inline-block;
+    margin-top: 10px;
+    border-radius: 3px;
+}
+
+.card-kutuphane{
+    background: #4fde4f;
+    display: inline-block;
+    padding: 1px 9px;
+    border-radius: 2px;
+    color: #fff;
+}
+
+.card-botisim{
+background: #f5f5f5;
+    margin-top: 6px;
+    padding: 2px 40px;
+    display: inline-block;
+    border: 1px solid #ddd;
+    border-radius: 2px;
+}
+
+.card-sahipisim{
+background: #f5f5f5;
+    margin-top: 6px;
+    padding: 2px 40px;
+    display: inline-block;
+    border: 1px solid #ddd;
+    border-radius: 2px;
+}
+
+.card-kisaaciklama{
+background: #f5f5f5;
+    margin-top: 6px;
+    padding: 2px 40px;
+    display: inline-block;
+    border: 1px solid #ddd;
+    border-radius: 2px;
+}

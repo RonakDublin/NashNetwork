@@ -32,18 +32,25 @@
    <% if(bot.ayar.has(`botlar.${idd}.durum`) === true) { %>
     <% if (bot.ayar.fetch(`botlar.${idd}.durum`) === "Onaylı") { %>
       <% if (bot.ayar.has(`botlar.${idd}.sertifika`) === true) { %>
+       <div class="col-12 col-sm-6 col-md-4">
+        <div class="card card-lg botcard" style="background-color:#fff; width:16rem;">
     <center><a href="/bot/<%=idd%>"><img src="<%=bot.ayar.fetch(`botlar.${idd}.avatar`)%>" class="card-img-top" alt="Bot Avatar"></a></center>
-       <br><br><span class="card-sertifika"><a style="color:darkorange"><img src="https://cdn.discordapp.com/emojis/522886304615366676.png" width="30px" height="30px"></a></span><br>   
-       <strong style='color: white;'>Oy: </strong><span style='color:whitesmoke;text-transform: none;'><%=bot.ayar.fetch(`botlar.${idd}.oy`)||0%></span>
-      <%=bot.ayar.fetch(`botlar.${idd}.kutuphane`)%>
-                                  <h4><a style="color:#222"><%=bot.useful.seg(bot.ayar.fetch(`botlar.${idd}.isim`), 5)%></a></h4>
-                                <h6 style="font-size:17px; color:#222"><%=bot.ayar.fetch(`botlar.${idd}.sahip`)%></h6>       
-                        
-                              <p class="card-text" style="color:#222"><%=bot.ayar.fetch(`botlar.${idd}.kisaaciklama`)%></p>
+      <span class="card-sertifika"><a style="color:darkorange"><img src="https://cdn.discordapp.com/emojis/522886304615366676.png" width="30px" height="30px"></a></span> 
+      <center>
+      <div class="card-oy">Oy: </strong><%=bot.ayar.fetch(`botlar.${idd}.oy`)||0%></div>
+      <div class="card-kutuphane"><%=bot.ayar.fetch(`botlar.${idd}.kutuphane`)%></div>
+    </center>
+  <center>
+      <div class="card-botisim"><a style="color:#222"><%=bot.useful.seg(bot.ayar.fetch(`botlar.${idd}.isim`), 5)%></a></div>
+                                <div class="card-botisim"><%=bot.ayar.fetch(`botlar.${idd}.sahip`)%></div>
+                              <div class="card-botisim"><%=bot.ayar.fetch(`botlar.${idd}.kisaaciklama`)%></div>
+    </center>
                                <hr>
                               <h6 align="center"><a href="/bot/<%=idd%>" style="font-size:20px; color:#222; background-color:#fff">Görüntüle</a> <b style="color:grey">|</b> 
                                 <a href="https://discordapp.com/oauth2/authorize?client_id=<%=idd%>&scope=bot&permissions=8" style="font-size:20px; color:#222; background-color:#fff">Davet Et</a></h6>
                        <br>
+    </div>
+    </div>
       <% } %>
     <% } %>
     <% } %>
