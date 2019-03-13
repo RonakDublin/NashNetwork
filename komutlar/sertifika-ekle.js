@@ -20,18 +20,18 @@ exports.run = async (client, message, args) => {
   
   if(!client.users.get(args[0]).bot) {
 		const embed = new Discord.RichEmbed()
-			.setDescription(`Canım bu kişi bot değil neyin kafası?!`)
+			.setDescription(`Bu kişi bot değil neyin kafası?!`)
 			.setColor(client.ayarlar.renk)
 		message.channel.send({embed})
 		return
 	}
   
 	if (db.has('botlar')) {
-			if (Object.keys(db.fetch('botlar')).includes(args[0]) === false)  return message.reply("Karşim, canım ciğerim ID'ini yazdıgın bot sistemde yok!")
+			if (Object.keys(db.fetch('botlar')).includes(args[0]) === false)  return message.reply("ID'ini yazdıgın bot sistemde yok!")
 	}
   
   if (db.has('botlar')) {
-  if (db.has(`botlar.${args[0]}.sertifika`) === true) return message.reply("Canım bu ID'e sahip sertifikalı bot zaten var.")
+  if (db.has(`botlar.${args[0]}.sertifika`) === true) return message.reply("Bu ID'e sahip sertifikalı bot zaten var.")
   }
   
   message.channel.send(`Başarıyla \`${args[0]}\` ID'li bot sertifikalı oldu!`)
