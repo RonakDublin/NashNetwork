@@ -601,6 +601,7 @@ background: #f5f5f5;
     display: inline-block;
     border: 1px solid #ddd;
     border-radius: 2px;
+  user-select:none;
 }
 
 .cards-sahipisim{
@@ -610,6 +611,7 @@ background: #f5f5f5;
     display: inline-block;
     border: 1px solid #ddd;
     border-radius: 2px;
+  user-select:none;
 }
 
 .cards-kisaaciklama{
@@ -619,6 +621,7 @@ background: #f5f5f5;
     display: inline-block;
     border: 1px solid #ddd;
     border-radius: 2px;
+    user-select:none;
 }
 
 .col-12 col-sm-6 col-md-4{
@@ -633,5 +636,8 @@ background: #f5f5f5;
 }
 
 .cards-alt a{
-  color:#333;
+    color: #333;
+    font-size: 15px;
+    border-right: 1px solid #333;
+    padding: 2px 5px;
 }
