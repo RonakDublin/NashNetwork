@@ -4,10 +4,15 @@
   <style> .footer{bottom:0px;position:absolute;} </style>
 	<div class="jumbotron">
 		<div align="center">
-		  <h3 style="color:#333">
-        Botunuza sertifika istediğinizden eminmisiniz?
-      </h3>
+       <form method="post">
+		  <label>Botunuz 100 sunucu ve üzerimi?</label>
+        <select id="kutuphane" name="kutuphane" required="required">
+       <option disabled selected>Bir seçim yapın</option>
+       <option value="evet">Evet</option>
+       <option value="hayır">Hayır</option>
+        </select>
       <button type="submit" class="butonss">Sertifika iste</button>
+      </form>
 </div>
   </div></div></div>
 <% include ./ek/footer %>

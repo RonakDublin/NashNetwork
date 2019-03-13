@@ -502,9 +502,21 @@ let ayar = req.body
 let ID = req.params.botID
 let s = req.user.id
 
-res.redirect("/bot/"+req.params.botID);
-client.channels.get(client.ayarlar.kayıt).send(`\`${req.user.username}#${req.user.discriminator}\``)
+request({
+url: `https://discordapp.com/api/v7/users/${ID}`,
+headers: {
+"Authorization": `Bot ${process.env.TOKEN}`
+},
+}, function(error, response, body) {
+if (error) return console.log(error)
+else if (!error) {
+var sistem = JSON.parse(body)
 
+res.redirect("/bot/"+req.params.botID);
+
+client.channels.get(client.ayarlar.kayıt).send(`\`${req.user.username}#${req.user.discriminator}\` adlı kullanıcı \`${sistem.id}\` ID'ine sahip \`${sistem.username}#${sistem.discriminator}\` adlı botuna sertifika istedi`)
+
+}})
 });
   
   app.get("/yetkili/hata", (req, res) => {renderTemplate(res, req, "hate.ejs")})
