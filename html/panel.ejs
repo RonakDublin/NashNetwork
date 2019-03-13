@@ -1,10 +1,11 @@
 <%- include('ek/header', {bot, user, path}) %>
+<title>WordBotlist - Panel</title>
 <div class="container">
   
   <div align="center" class="jumbotron">
        <img src="https://cdn.discordapp.com/avatars/<%=user.id%>/<%=user.avatar%>.png?size=512" class="rounded-circle panell">
-       <h5 style="color:#fff"><%=user.username%>#<%=user.discriminator%></h5>
-      <h6 style="color:#fff">Botların;</h6>
+       <h5 style="color:#333"><%=user.username%>#<%=user.discriminator%></h5>
+      <h6 style="color:#333">Botların;</h6>
   </div>
   
   <% if (bot.ayar.has('botlar')) { %>
@@ -13,7 +14,7 @@
 <%for(var i = 0; i < Object.keys(bot.ayar.fetch('botlar')).length; i++) {%>
 <% var idd = Object.keys(bot.ayar.fetch('botlar'))[i] %>
  <%  if (bot.ayar.fetch(`botlar.${idd}.sahipid`) === user.id) { %>
-  <div class="col-12 col-sm-6 col-md-4">
+  <div class="col-12 col-sm-6 col-md-4" style="display:inline-block;">
         <div class="card card-lg botcard" style="background-color:#fff; width:16rem;">
      <div align="center" class="card-img">
          <a href="/bot/<%=idd%>"><img src="<%=bot.ayar.fetch(`botlar.${idd}.avatar`)%>" class="card-img-top" alt="Bot Avatar"></a>

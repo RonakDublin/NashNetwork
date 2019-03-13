@@ -1,4 +1,6 @@
 <%- include('ek/header', {bot, user, path}) %>
+<title>WordBotlist - Kullanıcı Paneli</title>
+<style> .footer{bottom:0px;position:absolute;} </style>
 <div class="container">
   <div align="center" class="jumbotron">
     <%
@@ -10,7 +12,7 @@
     }
     %>
        <img src="https://cdn.discordapp.com/avatars/<%=kisi.id%>/<%=kisi.avatar%>.png?size=512" class="rounded-circle panell">
-       <h5 style="color:#fff"><%=kisi.username%>#<%=kisi.discriminator%></h5>
+       <h5 style="color:#333"><%=kisi.username%>#<%=kisi.discriminator%></h5>
        <a href="/kullanici/<%=kisi.id%>/profil" class="btn btn-default" style="background-color:#333; color:#fff"><%=txt%></a>
        <% if (user) { %>
        <% if (user.id === kisi.id) { %>

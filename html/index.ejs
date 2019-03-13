@@ -1,15 +1,7 @@
 <%- include('ek/header', {bot, user, path}) %>
+<title>WordBotlist</title>
 <div class="container">
-  
-	 <div class="jumbotron">
-		<div align="center">
-			<img src="https://cdn.discordapp.com/avatars/<%=bot.user.id%>/<%=bot.user.avatar%>.png" width="180px" height="180px" class="d-inline-block align-top rounded-circle" alt=""><br><br>
-      <h3><b>DiscordBotsTR</b></h3>
-					<p style="font-size:15px; color:lightgrey">Türk yapımı Discord botlarının toplandığı aynı zamandada reklamlarının yapıldığı DiscordBotsTR Sistemi! <br>Hızla geliştirilen botlarınızı barındırabileceğiniz güvenlikli bir sistem.</p><br>
-					<a href="/hakkimizda" class="btn btn-default" style="background-color:#333; color:#fff">Ayrıntılı bilgi için tıklayın.</a>
-    </div>
-    </div>
-
+  <br>
   <h3 align="center" style="color:orange">
     <strong>Sertifikalı Botlar
     </strong></h3>
@@ -18,7 +10,6 @@
   <div align="center">
     <input type="search" placeholder="Bot ara..." id="ara" name="ara">
     <br>
-    <div class="select-style">
     <select id="etiketselect">
       <option disabled selected>Bir etiket seçiniz.</option>
       <option value="noneFilter">Filtre kapat</option>
@@ -28,7 +19,6 @@
       <option value="Eğlence">Eğlence</option>
       <option value="Web Panel">Web Panel</option>
     </select>
-    </div>
 
     <p style="color:#333">
       <a style="color:red">Not:</a> Botları bot adını, kütüphanesini, kısa açıklamasını, sahip adını ve etiketlerini yazarak aratabilirsiniz.<br>Botların etiketlerini seçerekte etiket üzerinden bot aratabilirsiniz. 

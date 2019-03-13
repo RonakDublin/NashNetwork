@@ -1,5 +1,5 @@
 <%- include('ek/header', {bot, user, path}) %>
-
+<title>WordBotList - <%=bot.ayar.fetch(`botlar.${id}.isim`)%></title>
 <div class="post post-single">
                   <br>
                         <div class="post-meta">
@@ -12,37 +12,38 @@
                         </div><br>
                         <div class="post-thumbnail">
                             <div align="center"><img src="<%=bot.ayar.fetch(`botlar.${id}.avatar`)%>"
-                                width="300" height="300" class="botavatar"><h3 class="botisim"><%=bot.ayar.fetch(`botlar.${id}.isim`)%></h3><h5 class="kisaaciklama"><%=bot.ayar.fetch(`botlar.${id}.kisaaciklama`)%></h5></div>
+                                width="300" height="300" class="botavatar"><br><span class="botisim"><%=bot.ayar.fetch(`botlar.${id}.isim`)%></span>
+                              <h5 class="kisaaciklama"><%=bot.ayar.fetch(`botlar.${id}.kisaaciklama`)%></h5></div>
                           
         <div alig ="left">
-          <button class="botprefix btn btn-default"><%=bot.ayar.fetch(`botlar.${id}.prefix`)%></button>
+          <button class="botprefix"><%=bot.ayar.fetch(`botlar.${id}.prefix`)%></button>
           
       <%if (bot.ayar.has(`botlar.${id}.destek`)){%>
-                 <a href="<%=bot.ayar.fetch(`botlar.${id}.destek`)%>"><button class="btn btn-warning destek">Destek Sunucusu</button></a>
+                 <a href="<%=bot.ayar.fetch(`botlar.${id}.destek`)%>"><button class="destek">Destek Sunucusu</button></a>
             <%} %>
           
           <%if (bot.ayar.has(`botlar.${id}.site`)){%>
-                 <a href="<%=bot.ayar.fetch(`botlar.${id}.site`)%>"><button class="btn btn-warning website">Web Sitesi</button></a>
+                 <a href="<%=bot.ayar.fetch(`botlar.${id}.site`)%>"><button class="website">Web Sitesi</button></a>
             <%} %>
           
           <%if (bot.ayar.has(`botlar.${id}.github`)){%>
-                 <a href="<%=bot.ayar.fetch(`botlar.${id}.github`)%>"><button class="btn btn-warning github">Github</button></a>
+                 <a href="<%=bot.ayar.fetch(`botlar.${id}.github`)%>"><button class="github">Github</button></a>
             <%} %>
           </div>
-      <div align="center">                    
+      <div align="center" style="margin-top: 10px;">                    
   <% if (!user) { %>
-        <a href="/giris"><button class="oyy btn btn-primary oyver">Oy Verebilmek İçin Giriş Yapmalısın <i class="fa fa-lock"></i></button></a>
+        <a href="/giris"><button class="oyy oyver">Oy Verebilmek İçin Giriş Yapmalısın <i class="fa fa-lock"></i></button></a>
                     <% } else { %>
-        <a href="/bot/<%=id%>/oyver"><button id="oy" href="/bot/<%=id%>/oyver" class="btn btn-primary oyver" type="sumbit"><i aria-hidden="true"></i> Oy Ver</button></a>
-                      <% } %><br>
+        <a href="/bot/<%=id%>/oyver"><button id="oy" href="/bot/<%=id%>/oyver" class="oyver" type="sumbit"><i aria-hidden="true"></i> Oy Ver</button></a>
+                      <% } %>
             
-          <a href="https://discordapp.com/oauth2/authorize?client_id=<%=id%>&scope=bot&permissions=8"><button class="btn btn-success davetet"><i aria-hiddden="true"></i> Davet Et</button></a>
-        <a href="/bot/<%=id%>/rapor"><button class="btn btn-danger rapor"><i aria-hidden="true"></i>Rapor Et</button></a>
+          <a href="https://discordapp.com/oauth2/authorize?client_id=<%=id%>&scope=bot&permissions=8"><button class="davetet"><i aria-hiddden="true"></i> Davet Et</button></a>
+        <a href="/bot/<%=id%>/rapor"><button class="rapor"><i aria-hidden="true"></i>Rapor Et</button></a>
         
           <% if (user) { %>
           <% if(bot.ayar.fetch(`botlar.${id}.sahipid`) === user.id) { %>
-          <a href="/kullanici/<%=user.id%>/panel/<%=id%>/duzenle"><button class="btn btn-primary duzenle"><i aria-hiddden="true"></i> Düzenle</button></a>
-        <a href="/kullanici/<%=user.id%>/panel/<%=id%>/sil"><button class="sil btn btn-danger"><i aria-hidden="true"></i> Sil</button></a>
+          <a href="/kullanici/<%=user.id%>/panel/<%=id%>/duzenle"><button class="duzenle"><i aria-hiddden="true"></i> Düzenle</button></a>
+        <a href="/kullanici/<%=user.id%>/panel/<%=id%>/sil"><button class="sil "><i aria-hidden="true"></i> Sil</button></a>
           <% } %>
         <% } %>
                       
@@ -77,12 +78,12 @@
         </div><br>
           <div class="post-actions">
                   <div class="post-tags">
-                    <div align="center">
+                   <div align="center" style="margin-bottom: 20px;">
                       <%if(Array.isArray(bot.ayar.fetch(`botlar.${id}.etiket`)) === false) {%>
-                      <span class="etiket btn-btn-default"><a><%=bot.ayar.fetch(`botlar.${id}.etiket`)%></a></span>
+                      <span class="etiket"><a><%=bot.ayar.fetch(`botlar.${id}.etiket`)%></a></span>
                       <% } else { %>
                       <% for(var xx = 0; xx < bot.ayar.fetch(`botlar.${id}.etiket`).length; xx++) {%>
-                      <span class="etiket btn btn-default"><a><%=bot.ayar.fetch(`botlar.${id}.etiket`)[xx]%></a></span>
+                      <span class="etiket"><a><%=bot.ayar.fetch(`botlar.${id}.etiket`)[xx]%></a></span>
                     <% }%>
                       <% }%>
                     </div>

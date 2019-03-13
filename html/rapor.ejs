@@ -1,4 +1,6 @@
 <%- include('ek/header', {bot, user, path}) %>
+<title>WordBotlist - Rapor</title>
+<style>.footer{bottom:0px;position:absolute;}</style>
 <div class="container">
 	<div class="jumbotron">
 		<div align="center">
@@ -10,7 +12,7 @@
         <option value="Tamamen NSFW">Bot tamamen NSFW</option>
       </select>
       <br>
-      <h6 style="color:#fff">Rapor etme sebebini yukarıda bulamadın mı?</h6>
+      <h6 style="color:#333">Rapor etme sebebini yukarıda bulamadın mı?</h6>
       <input type="text" id="mesaj-2" name="mesaj-2" placeholder="Rapor etme sebebini yazınız.">
    
         <button class="btn btn-danger" type="sumbit">Rapor Et</button>
@@ -18,4 +20,5 @@
     </div>
 </div>
 </div>
-<% include ./ek/footer %>
+</div>
+<%- include ./ek/footer %>
