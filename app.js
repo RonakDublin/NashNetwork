@@ -490,6 +490,18 @@ res.redirect('/bot/'+req.params.botID)
 
 });
   
+  app.get("/bot/:botID/sertifikaiste", checkAuth, (req, res) => {
+renderTemplate(res, req, "sertifikaiste.ejs") 
+res.redirect('/bot/'+req.params.botID)
+});
+  
+   app.post("/bot/:botID/sertifikaiste", checkAuth, (req, res) => {
+res.redirect('/bot/'+req.params.botID)
+var id = req.params.botID
+let user = req.user.discriminator
+client.channels.get(client.ayarlar.kayıt).send(+'`' + id + '`')
+});
+  
   app.get("/yetkili/hata", (req, res) => {renderTemplate(res, req, "hate.ejs")})
 
 app.get("/yetkili", checkAuth, (req, res) => {
