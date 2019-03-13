@@ -42,7 +42,7 @@
         
           <% if (user) { %>
           <% if(bot.ayar.fetch(`botlar.${id}.sahipid`) === user.id) { %>
-          <a href="/bot/<%=id%>/sertifikaiste"><button id="sertifikaiste" href="/bot/<%=id%>/sertifikaiste" class="sertifikaiste" type="sumbit"><i aria-hidden="true"></i> Sertifika İste</button></a>
+          <a href="/kullanici/<%= user.id %>/panel/<%=id%>/sertifikaiste"><button id="sertifikaiste" href="/kullanici/<%= user.id %>/panel/<%=id%>/sertifikaiste" class="sertifikaiste" type="sumbit"><i aria-hidden="true"></i> Sertifika İste</button></a>
           <a href="/kullanici/<%=user.id%>/panel/<%=id%>/duzenle"><button class="duzenle"><i aria-hiddden="true"></i> Düzenle</button></a>
         <a href="/kullanici/<%=user.id%>/panel/<%=id%>/sil"><button class="sil "><i aria-hidden="true"></i> Sil</button></a>
           <% } %>

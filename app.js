@@ -490,38 +490,20 @@ res.redirect('/bot/'+req.params.botID)
 
 });
   
-  app.get("/bot/:botID/sertifikaiste", checkAuth, (req, res) => {
-renderTemplate(res, req, "sertifikaiste.ejs") 
-});
-  
-   app.post("/bot/:botID/sertifikaiste", checkAuth, (req, res) => {
-let id = req.params.botID
-client.channels.get(client.ayarlar.kayıt).send(`\`${db.fetch(`botlar.${id}.sahip`)}\` adlı kullanıcı \`${db.fetch(`botlar.${id}.id`)}\` ID'ine sahip \`${db.fetch(`botlar.${id}.isim`)}\` botuna sertifika isteğinde bulundu.`)
-res.redirect('/bot/'+req.params.botID)
-});
-  
-  
-  
-  app.get("/kullanici/:userID/panel/:botID/duzenle", checkAuth, (req, res) => {
-
+app.get("/kullanici/:userID/panel/:botID/sertifikaiste", checkAuth, (req, res) => {
 var id = req.params.botID
-
-
-renderTemplate(res, req, "duzenle.ejs", {id})
-
+renderTemplate(res, req, "sertifikaiste.ejs", {id})
 });
 
 
-app.post("/kullanici/:userID/panel/:botID/duzenle", checkAuth, (req, res) => {
+app.post("/kullanici/:userID/panel/:botID/sertifikaiste", checkAuth, (req, res , body) => {
 
 let ayar = req.body
 let ID = req.params.botID
 let s = req.user.id
 
-
-res.redirect("/kullanici/"+req.params.userID+"/panel");
-
-client.channels.get(client.ayarlar.kayıt).send(`\`${req.user.username}#${req.user.discriminator}\` adlı kullanıcı \`${sistem.id}\` ID'ine sahip \`${sistem.username}#${sistem.discriminator}\` adlı botunun başvurusunu/profilini düzenlendi!`)
+res.redirect("/bot/"+req.params.botID);
+client.channels.get(client.ayarlar.kayıt).send(`\`${req.user.username}#${req.user.discriminator}\``)
 
 });
   
