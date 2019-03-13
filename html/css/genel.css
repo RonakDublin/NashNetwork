@@ -551,38 +551,33 @@ background: #1976d2;
     user-select: none;
 }
 
-.card{
-    background: #fff;
-    padding: 10px;
+.cards{
+    background: none;
     color: #444;
-    margin-bottom: 10px;
-    display: inline-block;
-    width: 30%;
-    border: 1px solid #ddd;
-    margin-left: 2px;
     font-family: Roboto;
-    border-radius: 5px;
+    display: flex;
+    margin-bottom: 15px;
 }
 
-.card img{
+.cards img{
     width:150px;
     height: 150px;
     border-radius: 50%;
 }
 
-.card-sertifika img{
+.cards-sertifika img{
   width:50px;
   height:50px;
 }
 
-.card-sertifika{
+.cards-sertifika{
     position: absolute;
     top: -10px;
     right: -20px;
 
 }
 
-.card-oy{
+.cards-oy{
     background: #29bbf3;
     color: #fff;
     padding: 1px 9px;
@@ -591,7 +586,7 @@ background: #1976d2;
     border-radius: 3px;
 }
 
-.card-kutuphane{
+.cards-kutuphane{
     background: #4fde4f;
     display: inline-block;
     padding: 1px 9px;
@@ -599,7 +594,7 @@ background: #1976d2;
     color: #fff;
 }
 
-.card-botisim{
+.cards-botisim{
 background: #f5f5f5;
     margin-top: 6px;
     padding: 2px 40px;
@@ -608,7 +603,7 @@ background: #f5f5f5;
     border-radius: 2px;
 }
 
-.card-sahipisim{
+.cards-sahipisim{
 background: #f5f5f5;
     margin-top: 6px;
     padding: 2px 40px;
@@ -617,11 +612,26 @@ background: #f5f5f5;
     border-radius: 2px;
 }
 
-.card-kisaaciklama{
+.cards-kisaaciklama{
 background: #f5f5f5;
     margin-top: 6px;
     padding: 2px 40px;
     display: inline-block;
     border: 1px solid #ddd;
     border-radius: 2px;
+}
+
+.col-12 col-sm-6 col-md-4{
+  display:inline-block;
+}
+
+.cards-alt{
+    padding: 10px;
+    text-align: center;
+    border-top: 1px solid #dddd;
+    margin-top: 10px;
+}
+
+.cards-alt a{
+  color:#333;
 }

@@ -22,7 +22,7 @@
   </div>
    <h5 style="color:orange;">Sertifikalı Botlar</h5>
   
-  <div class="card">
+  <div class="cards">
     <% if (bot.ayar.has('botlar')) { %>
   <% const sorted = Object.keys(bot.ayar.fetch('botlar')).sort((a, b) => { return (bot.ayar.fetch(`botlar.${b}.oy`) || 0) - (bot.ayar.fetch(`botlar.${a}.oy`) || 0) }) %>
   <% const top = sorted.splice(0, Object.keys(bot.ayar.fetch('botlar')).length) %>
@@ -35,20 +35,21 @@
        <div class="col-12 col-sm-6 col-md-4">
         <div class="card card-lg botcard" style="background-color:#fff; width:16rem;">
     <center><a href="/bot/<%=idd%>"><img src="<%=bot.ayar.fetch(`botlar.${idd}.avatar`)%>" class="card-img-top" alt="Bot Avatar"></a></center>
-      <span class="card-sertifika"><a style="color:darkorange"><img src="https://cdn.discordapp.com/emojis/522886304615366676.png" width="30px" height="30px"></a></span> 
+      <span class="cards-sertifika"><a style="color:darkorange"><img src="https://cdn.discordapp.com/emojis/522886304615366676.png" width="30px" height="30px"></a></span> 
       <center>
-      <div class="card-oy">Oy: </strong><%=bot.ayar.fetch(`botlar.${idd}.oy`)||0%></div>
-      <div class="card-kutuphane"><%=bot.ayar.fetch(`botlar.${idd}.kutuphane`)%></div>
+      <div class="cards-oy">Oy: </strong><%=bot.ayar.fetch(`botlar.${idd}.oy`)||0%></div>
+      <div class="cards-kutuphane"><%=bot.ayar.fetch(`botlar.${idd}.kutuphane`)%></div>
     </center>
   <center>
-      <div class="card-botisim"><a style="color:#222"><%=bot.useful.seg(bot.ayar.fetch(`botlar.${idd}.isim`), 5)%></a></div>
-                                <div class="card-botisim"><%=bot.ayar.fetch(`botlar.${idd}.sahip`)%></div>
-                              <div class="card-botisim"><%=bot.ayar.fetch(`botlar.${idd}.kisaaciklama`)%></div>
+      <div class="cards-botisim"><a style="color:#222"><%=bot.useful.seg(bot.ayar.fetch(`botlar.${idd}.isim`), 5)%></a></div>
+                                <div class="cards-botisim"><%=bot.ayar.fetch(`botlar.${idd}.sahip`)%></div>
+                              <div class="cards-botisim"><%=bot.ayar.fetch(`botlar.${idd}.kisaaciklama`)%></div>
     </center>
-                               <hr>
-                              <h6 align="center"><a href="/bot/<%=idd%>" style="font-size:20px; color:#222; background-color:#fff">Görüntüle</a> <b style="color:grey">|</b> 
-                                <a href="https://discordapp.com/oauth2/authorize?client_id=<%=idd%>&scope=bot&permissions=8" style="font-size:20px; color:#222; background-color:#fff">Davet Et</a></h6>
-                       <br>
+    <div class="cards-alt">
+     <a href="/bot/<%=idd%>">Görüntüle</a>
+     <a href="https://discordapp.com/oauth2/authorize?client_id=<%=idd%>&scope=bot&permissions=8">Davet Et</a>
+     </div>
+         
     </div>
     </div>
       <% } %>
