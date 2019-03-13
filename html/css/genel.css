@@ -136,6 +136,12 @@ background: #1976d2;
 		float: right;
 		display: block;
 	}
+      .card{
+        margin: auto;
+        width:90%;
+        margin-left: 15px;
+        margin-bottom: 5px;
+    }
 }
 
 @media screen and (max-width: 600px) {
@@ -543,4 +549,23 @@ background: #1976d2;
   font-size: 20px;
     margin-top: 20px;
     user-select: none;
+}
+
+.card{
+    background: #fff;
+    padding: 10px;
+    color: #444;
+    margin-bottom: 10px;
+    display: inline-block;
+    width: 30%;
+    border: 1px solid #ddd;
+    margin-left: 2px;
+    font-family: Roboto;
+    border-radius: 5px;
+}
+
+.card img{
+    width:150px;
+    height: 150px;
+    border-radius: 50%;
 }
