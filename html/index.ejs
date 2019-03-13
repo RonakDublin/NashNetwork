@@ -1,4 +1,21 @@
 <%- include('ek/header', {bot, user, path}) %>
+<script>if (MyBB) { $([document, window]).bind("load", function() { MyBB.detectDSTChange('3'); }); }</script>
+<script src="https://unpkg.com/tippy.js@2.6.0/dist/tippy.all.min.js"></script>
+<script type="text/javascript">
+$(function() {
+
+  // Tippy
+  tippy('[title]', {
+    arrow: true,
+    arrowType: 'round',
+    animation: 'scale'
+  });
+
+  // Running Task
+  $('.running-task').delay(2500).fadeOut(100);
+
+});
+</script>
 <title>WorldBotlist</title>
 <div class="container">
  
@@ -20,7 +37,7 @@
     </p>
     
   </div>
-   <h5 style="color:orange;">Sertifikalı Botlar</h5>
+   <h5 style="color:#FF5722;user-select:none;">Sertifikalı Botlar</h5>
   
   <div class="cards">
     <% if (bot.ayar.has('botlar')) { %>
@@ -68,17 +85,18 @@
 </div>
   
 
-  <h5 style="color:#333;">Onaylı Botlar</h5>
+  <h5 style="color:#66BB6A;user-select:none;">Onaylı Botlar</h5>
   <div class="cards">
   
    <% if (bot.ayar.has('botlar')) { %>
-  <% const sorted = Object.keys(bot.ayar.fetch('botlar')).sort((a, b) => { return (bot.ayar.fetch(`botlar.${b}.oy`) || 0) - (bot.ayar.fetch(`botlar.${a}.oy`) || 20) }) %>
+  <% const sorted = Object.keys(bot.ayar.fetch('botlar')).sort((a, b) => { return (bot.ayar.fetch(`botlar.${b}.oy`) || 0) - (bot.ayar.fetch(`botlar.${a}.oy`) || 0) }) %>
   <% const top = sorted.splice(0, Object.keys(bot.ayar.fetch('botlar')).length) %>
   <% const map = top.map(x=>x) %>
 	<% for(var i = 0; i < Object.keys(bot.ayar.fetch('botlar')).length; i++) { %>
   <% let idd = map[i] %>
    <% if(bot.ayar.has(`botlar.${idd}.durum`) === true) { %>
 		<% if (bot.ayar.fetch(`botlar.${idd}.durum`) === "Onaylı") { %>
+    <% if (bot.ayar.has(`botlar.${idd}.sertifika`) === false) { %>
     <div class="col-12 col-sm-6 col-md-4">
         <div class="cards2" style="background-color:#fff; width:16rem;">
     <div value="<%=bot.useful.seg(bot.ayar.fetch(`botlar.${idd}.isim`), 5)%>" align="center" class="card-img">
@@ -105,6 +123,7 @@
     </div>
       <% } %>
     <% } %>
+   <% } %>
    <% } %>
    <% } else {%>
    <center><h5 style="color:#222">
