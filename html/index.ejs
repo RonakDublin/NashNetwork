@@ -1,21 +1,5 @@
 <%- include('ek/header', {bot, user, path}) %>
-<script>if (MyBB) { $([document, window]).bind("load", function() { MyBB.detectDSTChange('3'); }); }</script>
-<script src="https://unpkg.com/tippy.js@2.6.0/dist/tippy.all.min.js"></script>
-<script type="text/javascript">
-$(function() {
 
-  // Tippy
-  tippy('[title]', {
-    arrow: true,
-    arrowType: 'round',
-    animation: 'scale'
-  });
-
-  // Running Task
-  $('.running-task').delay(2500).fadeOut(100);
-
-});
-</script>
 <title>WorldBotlist</title>
 <div class="container">
  
@@ -32,7 +16,7 @@ $(function() {
       <option value="Web Panel">Web Panel</option>
     </select>
 
-    <p style="color:#333">
+    <p style="color:#333;user-select:none;">
       <a style="color:red">Not:</a> Botları bot adını, kütüphanesini, kısa açıklamasını, sahip adını ve etiketlerini yazarak aratabilirsiniz.<br>Botların etiketlerini seçerekte etiket üzerinden bot aratabilirsiniz. 
     </p>
     
