@@ -1,1 +1,3 @@
-scarew bunu çaldı çünkü scarew mal.
+```
+World Bot List
+```

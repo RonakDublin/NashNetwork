@@ -13,16 +13,16 @@ let profil = JSON.parse(fs.readFileSync('./profil.json', 'utf8'))
 client.profil = profil
 
 client.ayarlar = {
-  "prefix": "!", //prefix
-  "oauthSecret": "eSCTluLefbKnhVU2WyJoI3lhSCfvQD_k", //bot secreti
-	"callbackURL": "https://fiboxbotlist.glitch.me/callback", //benim sitenin urlsini kendin ile değiş "/callback" kalacak!
-	"kayıt": "547345613969162254", //onaylandı, reddedildi, başvuru yapıldı falan kayıtların gideceği kanalın ID'ini yazacaksın
+  "prefix": "-", //prefix
+  "oauthSecret": "CiOviI93KyBdqreHFSNkW1bHl4z5LEzD", //bot secreti
+	"callbackURL": "https://worldbotlist.glitch.me/callback", //benim sitenin urlsini kendin ile değiş "/callback" kalacak!
+	"kayıt": "546057134488682498", //onaylandı, reddedildi, başvuru yapıldı falan kayıtların gideceği kanalın ID'ini yazacaksın
   "renk": "RANDOM" //embedların rengini burdan alıo can sıkıntısdna yapılmış bişe falan fln
 };
 
-client.yetkililer = ["430011871555223553"] //tüm yetkililerin ıdleri gelcek array
-client.webyetkililer = ["430011871555223553"] //web yetkililerin ıdleri gelcek array
-client.sunucuyetkililer = ["430011871555223553"] //sunucu yetkililerin ıdleri gelcek array
+client.yetkililer = ['276829048943149057','348097494548348940','315218945693188098'] //tüm yetkililerin ıdleri gelcek array
+client.webyetkililer = ['276829048943149057','348097494548348940','315218945693188098'] //web yetkililerin ıdleri gelcek array
+client.sunucuyetkililer = ['276829048943149057','348097494548348940','315218945693188098'] //sunucu yetkililerin ıdleri gelcek array
 
 //["id", "id2"]
 
@@ -59,13 +59,6 @@ if (db.has(`oylar.${bot}.${user}`)) {
 
 }, 10000);
 
-client.on("guildMemberAdd", member => {
-      if (member.user.bot === true) {
-          member.addRole(member.guild.roles.find(r=>r.name==='Bot').id) //bot rolü
-       } else {
-          member.addRole(member.guild.roles.find(r=>r.name==='Kullanıcı').id) //üye rolü
-       }
-});
 
 const chalk = require('chalk')
 
@@ -96,8 +89,8 @@ fs.readdir(`./komutlar/`, (err, files) => {
 client.on("message", async message => {
 
 	if (message.author.bot) return
-	if (!message.content.startsWith('!')) return
-	var command = message.content.split(' ')[0].slice('!'.length)
+	if (!message.content.startsWith('-')) return
+	var command = message.content.split(' ')[0].slice('-'.length)
 	var args = message.content.split(' ').slice(1)
 	var cmd = ''
 
@@ -151,7 +144,7 @@ client.on("message", async message => {
 		}
 		if (cmd.conf.permLevel === 4) {
 			const x = await client.fetchApplication()
-      var arr = [x.owner.id, '430011871555223553']
+      var arr = [x.owner.id, '276829048943149057','348097494548348940','315218945693188098']
 			if (!arr.includes(message.author.id)) {
 				const embed = new Discord.RichEmbed()
 					.setDescription(`Yetkin yetersiz.`)
@@ -183,7 +176,7 @@ client.on("message", async message => {
 	}
 });
 
-client.login("token") //tokeni yaz işte
+client.login("NTQyMzQyOTI0NzQ3MTQ1MjI4.D2qyag.VxVlLvGKtnxrWLOzYUWyWDFkh9k") //tokeni yaz işte
 
 process.env = {}
-process.env.TOKEN = "token";
+process.env.TOKEN = "NTQyMzQyOTI0NzQ3MTQ1MjI4.D2qyag.VxVlLvGKtnxrWLOzYUWyWDFkh9k";
