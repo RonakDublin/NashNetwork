@@ -34,12 +34,14 @@
       <% if (bot.ayar.has(`botlar.${idd}.sertifika`) === true) { %>
        <div class="col-12 col-sm-6 col-md-4">
         <div class="card card-lg botcard" style="background-color:#fff; width:16rem;">
-    <center><a href="/bot/<%=idd%>"><img src="<%=bot.ayar.fetch(`botlar.${idd}.avatar`)%>" class="card-img-top" alt="Bot Avatar"></a></center>
+        <div value="<%=bot.useful.seg(bot.ayar.fetch(`botlar.${idd}.isim`), 5)%>" align="center" class="card-img">
+    <center><a href="/bot/<%=idd%>"><img src="<%=bot.ayar.fetch(`botlar.${idd}.avatar`)%>" class="card-img-top" alt="<%=bot.useful.seg(bot.ayar.fetch(`botlar.${idd}.isim`), 5)%>" title="<%=bot.useful.seg(bot.ayar.fetch(`botlar.${idd}.isim`), 5)%>"></a></center>
       <span class="cards-sertifika"><a><img src="https://cdn.discordapp.com/emojis/522886304615366676.png" width="30px" height="30px" alt="Sertifikalı" title="Sertifikalı"></a></span> 
       <center>
       <div class="cards-oy">Oy: </strong><%=bot.ayar.fetch(`botlar.${idd}.oy`)||0%></div>
       <div class="cards-kutuphane"><%=bot.ayar.fetch(`botlar.${idd}.kutuphane`)%></div>
     </center>
+         </div>
   <center>
       <div class="cards-botisim"><a style="color:#222"><%=bot.useful.seg(bot.ayar.fetch(`botlar.${idd}.isim`), 5)%></a></div>
                                 <div class="cards-botisim"><%=bot.ayar.fetch(`botlar.${idd}.sahip`)%></div>
@@ -79,20 +81,27 @@
 		<% if (bot.ayar.fetch(`botlar.${idd}.durum`) === "Onaylı") { %>
     <div class="col-12 col-sm-6 col-md-4">
         <div class="card card-lg botcard" style="background-color:#fff; width:16rem;">
-  <center><a href="/bot/<%=idd%>"><img src="<%=bot.ayar.fetch(`botlar.${idd}.avatar`)%>" class="card-img-top" alt="Bot Avatar"></a></center>
+    <div value="<%=bot.useful.seg(bot.ayar.fetch(`botlar.${idd}.isim`), 5)%>" align="center" class="card-img">
+  <center><a href="/bot/<%=idd%>"><img src="<%=bot.ayar.fetch(`botlar.${idd}.avatar`)%>" class="card-img-top" alt="<%=bot.useful.seg(bot.ayar.fetch(`botlar.${idd}.isim`), 5)%>" title="<%=bot.useful.seg(bot.ayar.fetch(`botlar.${idd}.isim`), 5)%>"></a></center>
           <% if(bot.ayar.has(`botlar.${idd}.sertifika`) === true) { %>
-        <span class="cards-sertifika"><a style="color:darkorange"><img src="https://cdn.discordapp.com/emojis/522886304615366676.png" width="30px" height="30px"></a><span>
+      <span class="cards-sertifika"><a style="color:darkorange"><img src="https://cdn.discordapp.com/emojis/522886304615366676.png" width="30px" height="30px"></a></span>
        <% } %>
           <center>
             <div class="cards-oy">Oy: </strong><%=bot.ayar.fetch(`botlar.${idd}.oy`)||0%></div>
       <div class="cards-kutuphane"><%=bot.ayar.fetch(`botlar.${idd}.kutuphane`)%></div>
     </center>
-   <center>
-      <div class="cards-botisim"><a style="color:#222"><%=bot.useful.seg(bot.ayar.fetch(`botlar.${idd}.isim`), 5)%></a></div>
-                                <div class="cards-botisim"><%=bot.ayar.fetch(`botlar.${idd}.sahip`)%></div>
-                              <div class="cards-botisim"><%=bot.ayar.fetch(`botlar.${idd}.kisaaciklama`)%></div>
-    </center>
-                       </div><br>
+                     
+          </div>
+      <center>
+  <div class="cards-botisim"><a style="color:#222"><%=bot.useful.seg(bot.ayar.fetch(`botlar.${idd}.isim`), 5)%></a></div>
+  <div class="cards-botisim"><%=bot.ayar.fetch(`botlar.${idd}.sahip`)%></div>
+  <div class="cards-botisim"><%=bot.ayar.fetch(`botlar.${idd}.kisaaciklama`)%></div>
+        </center>
+    <div class="cards-alt">
+     <a href="/bot/<%=idd%>">Görüntüle</a>
+     <a href="https://discordapp.com/oauth2/authorize?client_id=<%=idd%>&scope=bot&permissions=8" style="border-right:none !important;">Davet Et</a>
+     </div>
+    </div>
     </div>
       <% } %>
     <% } %>
