@@ -41,7 +41,7 @@
    <% if(bot.ayar.has(`botlar.${idd}.durum`) === true) { %>
 		<% if (bot.ayar.fetch(`botlar.${idd}.durum`) === "Onaylı") { %>
     <div class="col-12 col-sm-6 col-md-4">
-        <div class="card card-lg botcard" style="background-color:#fff; width:16rem;">
+    <div class="cards2" style="background-color:#fff; width:16rem;">
     <div value="<%=bot.useful.seg(bot.ayar.fetch(`botlar.${idd}.isim`), 5)%>" align="center" class="card-img">
   <center><a href="/bot/<%=idd%>"><img src="<%=bot.ayar.fetch(`botlar.${idd}.avatar`)%>" class="card-img-top" alt="<%=bot.useful.seg(bot.ayar.fetch(`botlar.${idd}.isim`), 5)%>" title="<%=bot.useful.seg(bot.ayar.fetch(`botlar.${idd}.isim`), 5)%>"></a></center>
           <% if(bot.ayar.has(`botlar.${idd}.sertifika`) === true) { %>

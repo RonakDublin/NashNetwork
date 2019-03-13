@@ -142,7 +142,7 @@ margin-bottom: 20px !important;
     }
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 1299px) {
 .cards{
 margin-bottom: 20px !important;
     display: block !important;
@@ -562,6 +562,23 @@ background: #1976d2;
     font-family: Roboto;
     display: flex;
     margin-bottom: 15px;
+}
+
+.cards2 {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-clip: border-box;
+    border: 1px solid rgba(0,0,0,0.125);
+    border-radius: 0.25rem;
+    margin-bottom:10px;
 }
 
 .cards img{
