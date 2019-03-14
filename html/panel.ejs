@@ -71,41 +71,7 @@ document.title = title;
       <% } %>
       
 
-  <div class="cards">
-  <% if (bot.ayar.has('sunucular')) { %>
-       <% if (bot.ayar.has(`ksunucular.${user.id}`)) { %>   
-
-<%for(var i = 0; i < Object.keys(bot.ayar.fetch('sunucular')).length; i++) {%>
-<% var idd = Object.keys(bot.ayar.fetch('sunucular'))[i] %>
- <%  if (bot.ayar.fetch(`sunucular.${idd}.sahipid`) === user.id) { %>
-  <div class="col-12 col-sm-6 col-md-4" style="display:inline-block;">
-        <div class="cards2" style="background-color:#fff; width:16rem;">
-       <center>
-       <a href="/bot/<%=idd%>"><img src="<%=bot.ayar.fetch(`sunucular.${idd}.avatar`)%>" class="card-img-top" alt="Bot Avatar" title="<%=bot.useful.seg(bot.ayar.fetch(`sunucular.${idd}.isim`), 5)%>"></a>
-      </center>
-          <center>
-      <%  if(bot.ayar.fetch(`sunucular.${idd}.durum`) === 'Beklemede' || !bot.ayar.has(`sunucular.${idd}.durum`)) { %>
-       <span class="cards-beklemede">Beklemede</span>
-       <% } %>
-
-       <%  if(bot.ayar.fetch(`sunucular.${idd}.durum`) === 'Reddedilmiş') { %>
-       <span class="card-reddedilmis">Reddedilmiş</span>
-       <% } %>
-
-       <%  if(bot.ayar.fetch(`sunucular.${idd}.durum`) === 'Onaylı') { %>
-       <span class="cards-onayli">Onaylanmış</span>
-       <% } %>
-    </center>
-                        <div class="cards-alt">
-                            <a href="/bot/<%=idd%>">Görüntüle</a>
-                            <a href="/kullanici/<%=user.id%>/panel/<%=idd%>/duzenle">Düzenle</a>
-                             <a href="/kullanici/<%=user.id%>/panel/<%=idd%>/sil" style="border-right:none !important;">Sil</a></h6>                          
-    </div>
-                       </div><br>
-   </div>
-<% } %>
-  <% } %>
-</div>
+ 
 
 
 </div>
