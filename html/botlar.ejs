@@ -31,7 +31,7 @@
       <div class="cards">
   
    <% if (bot.ayar.has('botlar')) { %>
-  <% const sorted = Object.keys(bot.ayar.fetch('botlar')).sort((a, b) => { return (bot.ayar.fetch(`botlar.${b}.oy`) || 0) - (bot.ayar.fetch(`botlar.${a}.oy`) || 20) }) %>
+ <% const sorted = Object.keys(bot.ayar.fetch('botlar')).sort((a, b) => { return (bot.ayar.fetch(`botlar.${b}.oy`) || 0) - (bot.ayar.fetch(`botlar.${a}.oy`) || 0) }) %>
   <% const top = sorted.splice(0, Object.keys(bot.ayar.fetch('botlar')).length) %>
   <% const map = top.map(x=>x) %>
 	<% for(var i = 0; i < Object.keys(bot.ayar.fetch('botlar')).length; i++) { %>
