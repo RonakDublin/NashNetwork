@@ -16,9 +16,11 @@
        <% } else { %>
         <h6 style="color: #333;background: #fff;padding: 5px;border-radius: 2px;border: 1px solid #ddd;">Profil bilgisi ayarlanmamış.</h6>
        <% } %>
-    
+    <% if (user) { %>
+    <% if (user.id === kisi.id) { %>
      <a href="/kullanici/<%=kisi.id%>/profil/ayarla" class="btn btn-default" style="background-color:#333; color:#fff">Profili Düzenle</a>
-
+    <% } %>
+    <% } %>
   </div>
 
   <h3 style="color:#222"><%=kisi.username%> adlı kullanıcının botları</h3>
