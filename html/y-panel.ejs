@@ -141,7 +141,7 @@
 		</tr>	
 		<%for(var i = 0; i < Object.keys(bot.ayar.fetch('botlar')).length; i++) {%>
 		<% let id = Object.keys(bot.ayar.fetch('botlar'))[i] %>
-		<% if (bot.ayar.fetch(`botlar.${id}.durum`) === 'Sertifika İsteği' || bot.ayar.has(`botlar.${id}.durum`) === false) { %>
+		<% if (bot.ayar.fetch(`botlar.${id}.sertifikaistek`) === 'Sertifika İsteği' ) { %>
 		<tr>
 		<td><a class="btn btn-success" href="/botyonetici/sertifikaver/<%=id%>">Sertifika ver<i aria-hidden="true"></i></a>
 		<a class="btn btn-warning" href="/botyonetici/sertifikaverme/<%=id%>">Sertifika işlemini iptal et<i aria-hidden="true"></i></a></td>
