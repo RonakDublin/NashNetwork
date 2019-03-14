@@ -613,6 +613,25 @@ app.post("/botyonetici/sertifikaverme/:botID", checkAuth, (req, res) => {
   }
 
   });
+  
+    app.get("/botyonetici/sertifikasil/:botID", checkAuth, (req, res) => {
+  if(!client.yetkililer.includes(req.user.id) ) return res.redirect('/yetkili/hata')
+  renderTemplate(res, req, "sertifikasil.ejs")
+});
+
+app.post("/botyonetici/sertifikasil/:botID", checkAuth, (req, res) => {
+  if(!client.yetkililer.includes(req.user.id) ) return res.redirect('/yetkili/hata')
+  let id = req.params.botID
+   db.delete(`botlar.${id}.sertifika`)
+  res.redirect("/yetkili")
+  
+  client.channels.get(client.ayarlar.kayıt).send(`\`${req.user.username}#${req.user.discriminator}\` adlı yetkili tarafından \`${db.fetch(`botlar.${id}.sahip`)}\` adlı kullanıcının \`${db.fetch(`botlar.${id}.id`)}\` ID'ine sahip botunun sertifikası \`${req.body['sertifika-sil-sebep']}\` sebebi ile silindi.`)
+  
+  if (client.users.has(db.fetch(`botlar.${id}.sahipid`)) === true) {
+  client.users.get(db.fetch(`botlar.${id}.sahipid`)).send(`\`${db.fetch(`botlar.${id}.isim`)}\` adlı botunda bulunan sertifika \`${req.body['sertifika-sil-sebep']}\` sebebi ile silindi!`)
+  }
+
+  });
 
   
 //API
