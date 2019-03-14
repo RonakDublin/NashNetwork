@@ -25,7 +25,7 @@
 <div class="cards">
   
   <% if (bot.ayar.has('botlar')) { %>
-    <% if (bot.ayar.has(`kbotlar.${user.id}`)) { %>   
+    <% if (bot.ayar.has(`kbotlar.${kisi.id}`)) { %>   
 
 <%for(var i = 0; i < Object.keys(bot.ayar.fetch('botlar')).length; i++) {%>
 <% var idd = Object.keys(bot.ayar.fetch('botlar'))[i] %>
@@ -59,7 +59,7 @@
        </center>
   <div class="cards-alt">
   <a href="/bot/<%=idd%>">Görüntüle</a> 
-  <a href="https://discordapp.com/oauth2/authorize?client_id=<%=idd%>&scope=bot&permissions=8">Davet Et</a>
+  <a href="https://discordapp.com/oauth2/authorize?client_id=<%=idd%>&scope=bot&permissions=8" style="border-right:none !important;">Davet Et</a>
                             </div>
                     </div>
 </div>
