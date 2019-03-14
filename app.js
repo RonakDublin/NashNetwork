@@ -497,11 +497,10 @@ renderTemplate(res, req, "sertifikaiste.ejs", {id})
 
 
 app.post("/kullanici/:userID/panel/:botID/sertifikaiste", checkAuth, (req, res , body) => {
-
 let ayar = req.body
 let ID = req.params.botID
 let s = req.user.id
-
+db.set(`botlar.${ID}.durum`, 'Sertifika İsteği')
 request({
 url: `https://discordapp.com/api/v7/users/${ID}`,
 headers: {
@@ -579,20 +578,22 @@ app.post("/botyonetici/reddet/:botID", checkAuth, (req, res) => {
 
   });
 
-  
-  app.post("/botyonetici/sertifikaver/:botID", checkAuth, (req, res) => {
+    
+  app.get("/botyonetici/sertifikaver/:botID", checkAuth, (req, res) => {
   if(!client.yetkililer.includes(req.user.id) ) return res.redirect('/yetkili/hata')
-  let id = req.params.botID
-  
-  res.redirect("/yetkili")
-  
+let id = req.params.botID
+
+db.set(`botlar.${id}.sertifika`, "Bulunuyor")
+
+res.redirect("/yetkili")
+
   client.channels.get(client.ayarlar.kayıt).send(`\`${req.user.username}#${req.user.discriminator}\` adlı yetkili tarafından \`${db.fetch(`botlar.${id}.sahip`)}\` adlı kullanıcının \`${db.fetch(`botlar.${id}.id`)}\` ID'ine sahip \`${db.fetch(`botlar.${id}.isim`)}\` adlı botuna sertifika verildi.`)
   
   if (client.users.has(db.fetch(`botlar.${id}.sahipid`)) === true) {
   client.users.get(db.fetch(`botlar.${id}.sahipid`)).send(`\`${db.fetch(`botlar.${id}.isim`)}\` adlı botunuza sertifika verildi!`)
   }
 
-  });
+});
   
 //API
   
