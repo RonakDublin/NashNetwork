@@ -717,12 +717,7 @@ app.get("/blog", (req, res) => {
 });
   
   
-  app.get("/sunucuekle/hata", (req, res) => {
- 
-renderTemplate(res, req, "hataaa.ejs")
-});
-
-app.get("/sunucuekle", checkAuth, (req, res) => {
+ app.get("/sunucuekle", checkAuth, (req, res) => {
  
 renderTemplate(res, req, "sunucuekle.ejs")
 });
@@ -731,13 +726,14 @@ app.post("/sunucuekle", checkAuth, (req, res) => {
 
 let ayar = req.body
 
-if (ayar === {} || !ayar['sunucuid'] || !ayar['sunucu-aciklama'] ) return res.redirect('/botyonetim/hata')
+if (ayar === {} || !ayar['sunucuid'] || !ayar['sunucu-aciklama']) return res.redirect('/sunucuyonetim/hata')
 
 let ID = ayar['sunucuid']
 
 if (db.has('sunucular')) {
     if (Object.keys(db.fetch('sunucular')).includes(ID) === true) return res.redirect('/sunucuekle/hata')
 }
+  
   
 request({
 url: `https://discordapp.com/channels/${ID}`,
@@ -752,7 +748,7 @@ var sistem = JSON.parse(body)
 db.set(`sunucular.${ID}.id`, sistem.id)
 db.set(`sunucular.${ID}.isim`, sistem.username+"#"+sistem.discriminator)
 
-db.set(`sunucular.${ID}.avatar`, `https://cdn.discordapp.com/icons/${sistem.id}/${sistem.icon}.png`)
+db.set(`sunucular.${ID}.avatar`, `https://cdn.discordapp.com/avatars/${sistem.id}/${sistem.avatar}.png`)
 
 request({
 url: `https://discordapp.com/api/v7/users/${req.user.id}`,
@@ -764,28 +760,22 @@ if (error) return console.log(error)
 else if (!error) {
 var sahip = JSON.parse(body)
 
-db.set(`sunucular.${ID}.sahip`, sahip.username+"#"+sahip.discriminator)
-db.set(`sunucular.${ID}.sahipid`, sahip.id)
-db.set(`sunucular.${ID}.sunucuaciklama`, ayar['sunucuaciklama'])
+db.set(`botlar.${ID}.sahip`, sahip.username+"#"+sahip.discriminator)
+db.set(`botlar.${ID}.sahipid`, sahip.id)
+db.set(`botlar.${ID}.uzunaciklama`, ayar['sunucu-aciklama'])
 
 db.set(`ksunucular.${req.user.id}.${ID}`, db.fetch(`sunucular.${ID}`))
 
 res.redirect("/kullanici/"+req.params.userID+"/panel");
 
-//client.channels.get(client.ayarlar.kayıt).send(`\`${req.user.username}#${req.user.discriminator}\` adlı kullanıcı \`${sistem.id}\` ID'ine sahip \`${sistem.username}#${sistem.discriminator}\` adlı botu ile başvuru yaptı!`)
-
-//if (client.users.has(req.user.id) === true) {
- // client.users.get(req.user.id).send(`\`${sistem.username}#${sistem.discriminator}\` adlı botunuz sitemize eklendi incelendikten sonra eklenicek.`)
-//}
 
 }})
 }})
 
 });
   
-  
-  app.get("/sunucu/:sunucuID", (req, res) => {
-var id = req.params.sunucuID
+  app.get("/sunucu/:botID", (req, res) => {
+var id = req.params.botID
 
 request({
 url: `https://discordapp.com/channels/${id}`,
