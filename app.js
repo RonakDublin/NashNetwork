@@ -515,7 +515,7 @@ const embed = new Discord.RichEmbed()
 .setDescription(`\`${req.user.username}#${req.user.discriminator}\` adlı kullanıcı \`${sistem.id}\` ID'ine sahip \`${sistem.username}#${sistem.discriminator}\` adlı botuna sertifika istedi.\n\n**Başvuru bilgileri**`)
 .addField('Botunuz 7/24 aktif mi?',req.body['secim1'])
 .addField('Botunuzun ana özelliği nedir?',req.body['secim2'])
-.addField('otunuzun aynı işlevi yapan diğer botlardan farkı varmı? Varsa neler',req.body['secim3'])
+.addField('Botunuzun aynı işlevi yapan diğer botlardan farkı varmı? Varsa neler',req.body['secim3'])
 client.channels.get('555676309494431776').send(embed)
 }})
 });
@@ -715,93 +715,6 @@ app.listen(3000);
 app.get("/blog", (req, res) => {
   res.redirect('/');
 });
-  
-  
- app.get("/sunucuekle", checkAuth, (req, res) => {
- 
-renderTemplate(res, req, "sunucuekle.ejs")
-});
-
-app.post("/sunucuekle", checkAuth, (req, res) => {
-
-let ayar = req.body
-
-if (ayar === {} || !ayar['sunucuid'] || !ayar['sunucu-aciklama']) return res.redirect('/sunucuyonetim/hata')
-
-let ID = ayar['sunucuid']
-
-if (db.has('sunucular')) {
-    if (Object.keys(db.fetch('sunucular')).includes(ID) === true) return res.redirect('/sunucuekle/hata')
-}
-  
-  
-request({
-url: `https://discordapp.com/channels/${ID}`,
-headers: {
-"Authorization": `Bot ${process.env.TOKEN}`
-},
-}, function(error, response, body) {
-if (error) return console.log(error)
-else if (!error) {
-var sistem = JSON.parse(body)
-
-db.set(`sunucular.${ID}.id`, sistem.id)
-db.set(`sunucular.${ID}.isim`, sistem.username+"#"+sistem.discriminator)
-
-db.set(`sunucular.${ID}.avatar`, `https://cdn.discordapp.com/avatars/${sistem.id}/${sistem.avatar}.png`)
-
-request({
-url: `https://discordapp.com/api/v7/users/${req.user.id}`,
-headers: {
-"Authorization": `Bot ${process.env.TOKEN}`
-},
-}, function(error, response, body) {
-if (error) return console.log(error)
-else if (!error) {
-var sahip = JSON.parse(body)
-
-db.set(`botlar.${ID}.sahip`, sahip.username+"#"+sahip.discriminator)
-db.set(`botlar.${ID}.sahipid`, sahip.id)
-db.set(`botlar.${ID}.uzunaciklama`, ayar['sunucu-aciklama'])
-
-db.set(`ksunucular.${req.user.id}.${ID}`, db.fetch(`sunucular.${ID}`))
-
-res.redirect("/kullanici/"+req.params.userID+"/panel");
-
-
-}})
-}})
-
-});
-  
-  app.get("/sunucu/:botID", (req, res) => {
-var id = req.params.botID
-
-request({
-url: `https://discordapp.com/channels/${id}`,
-headers: {
-"Authorization": `Bot ${process.env.TOKEN}`
-},
-}, function(error, response, body) {
-if (error) return console.log(error)
-else if (!error) {
-var sistem = JSON.parse(body)
-
-if (db.fetch(`${id}.avatar`) !== `https://cdn.discordapp.com/icon/${sistem.id}/${sistem.icon}.png`) {
-db.set(`${id}.avatar`, `https://cdn.discordapp.com/icon/${sistem.id}/${sistem.icon}.png`)
-}
-
-}
-})
-
-renderTemplate(res, req, 'sunucu.ejs', {id})
-
-});
-
-app.get("/sunucu/:sunucuID/hata", (req, res) => {
-renderTemplate(res, req, "hata.ejs")
-});
-
-  
+    
 };
 
