@@ -389,13 +389,9 @@ if (ayar['botdestek']) {
 db.set(`botlar.${ID}.destek`, ayar['botdestek'])
 }
 
-res.redirect("/kullanici/"+req.params.userID+"/panel");
+res.redirect("/bot/"+req.params.botID);
 
 client.channels.get(client.ayarlar.kayıt).send(`\`${req.user.username}#${req.user.discriminator}\` adlı kullanıcı \`${sistem.id}\` ID'ine sahip \`${sistem.username}#${sistem.discriminator}\` adlı botunun başvurusunu/profilini düzenlendi!`)
-
-if (client.users.has(req.user.id) === true) {
-client.users.get(req.user.id).send(`\`${sistem.username}#${sistem.discriminator}\` adlı botunuzun profili/başvurusu başarıyla düzenlendi!`)
-}
 
 }})
 }})

@@ -387,7 +387,6 @@ tr:nth-child(even) {
 
 .uzunaciklama {
     width: 100%;
-    height: 250px;
     padding: 12px 20px;
     box-sizing: border-box;
     border: 1px solid #cccccc;
