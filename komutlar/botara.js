@@ -74,6 +74,6 @@ exports.conf = {
 
 exports.help = {
   name: 'bot-ara',
-  description: 'DiscordBotsTR sistemindeki botları aramanızı sağlar.',
+  description: 'WorldBotList sistemindeki botları aramanızı sağlar.',
   usage: 'bot-ara [bot id]'
 };

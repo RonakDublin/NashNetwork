@@ -127,6 +127,35 @@
 		</div>
 </div>
   <br><br>
+    
+    <!-- Sertifika isteği yapılmış botlar -->
+<a class="btn btn-default" data-toggle="collapse" style="background-color: #fff;color: #222;width: 100%;border: 1px solid #ddd;margin-bottom: 5px;font-size: 18px;border-radius: 2px;" data-target="#onaysız">Reddedilmiş Botlar</a>
+<div id="onaysız" class="collapse in">
+<div style="overflow-x:auto;width: 100%;font-size: 15px;">
+		<table class="table" style="background-color:#fff">
+		<tr>
+		<th>İşlem</th>
+		<th>Bot Adı</th>
+		<th>Bot ID</th>
+		<th style="width:10%;">Bot Prefix</th>
+		</tr>	
+		<%for(var i = 0; i < Object.keys(bot.ayar.fetch('botlar')).length; i++) {%>
+		<% let id = Object.keys(bot.ayar.fetch('botlar'))[i] %>
+		<% if (bot.ayar.fetch(`botlar.${id}.durum`) === 'Reddedilmiş') { %>
+		<tr>
+		<td><a class="btn btn-success" href="/botyonetici/onayla/<%=id%>">Onayla<i aria-hidden="true"></i></a>
+		<a class="btn btn-warning" href="/botyonetici/bekleme/<%=id%>">Beklemeye Al<i aria-hidden="true"></i></a>
+		<a class="btn btn-primary" href="https://discordapp.com/oauth2/authorize?client_id=<%=id%>&scope=bot&permissions=0">Davet Et (Perm: 0)</a>
+		<a class="btn btn-primary" href="https://discordapp.com/oauth2/authorize?client_id=<%=id%>&scope=bot&permissions=8">Davet Et (Perm: 8)</a></td>
+		<td><%=bot.ayar.fetch(`botlar.${id}.isim`)%></td>
+		<td><%=bot.ayar.fetch(`botlar.${id}.id`)%></td>
+		<td><%=bot.ayar.fetch(`botlar.${id}.prefix`)%></td>
+		</tr>
+		<% } %>
+		<%}%>
+		</table>
+		</div>
+</div>
 
 <% } else {%>
 <h5 style="color:#fff">
