@@ -15,7 +15,7 @@ client.profil = profil
 client.ayarlar = {
   "prefix": "-", //prefix
   "oauthSecret": "CiOviI93KyBdqreHFSNkW1bHl4z5LEzD", //bot secreti
-	"callbackURL": "https://www.worldbotlist.ml/callback", //benim sitenin urlsini kendin ile değiş "/callback" kalacak!
+	"callbackURL": "https://worldbotlist.ml/callback", //benim sitenin urlsini kendin ile değiş "/callback" kalacak!
 	"kayıt": "546057134488682498", //onaylandı, reddedildi, başvuru yapıldı falan kayıtların gideceği kanalın ID'ini yazacaksın
   "renk": "RANDOM" //embedların rengini burdan alıo can sıkıntısdna yapılmış bişe falan fln
 };
