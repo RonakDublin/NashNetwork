@@ -783,4 +783,35 @@ res.redirect("/kullanici/"+req.params.userID+"/panel");
 
 });
   
+  
+  app.get("/sunucu/:sunucuID", (req, res) => {
+var id = req.params.sunucuID
+
+request({
+url: `https://discordapp.com/channels/${id}`,
+headers: {
+"Authorization": `Bot ${process.env.TOKEN}`
+},
+}, function(error, response, body) {
+if (error) return console.log(error)
+else if (!error) {
+var sistem = JSON.parse(body)
+
+if (db.fetch(`${id}.avatar`) !== `https://cdn.discordapp.com/icon/${sistem.id}/${sistem.icon}.png`) {
+db.set(`${id}.avatar`, `https://cdn.discordapp.com/icon/${sistem.id}/${sistem.icon}.png`)
+}
+
+}
+})
+
+renderTemplate(res, req, 'sunucu.ejs', {id})
+
+});
+
+app.get("/sunucu/:sunucuID/hata", (req, res) => {
+renderTemplate(res, req, "hata.ejs")
+});
+
+  
 };
+
