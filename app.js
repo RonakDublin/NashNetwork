@@ -717,9 +717,6 @@ app.get("/blog", (req, res) => {
 });
   
   
-  
-  
-  
   app.get("/sunucuekle/hata", (req, res) => {
  
 renderTemplate(res, req, "hataaa.ejs")
@@ -743,7 +740,7 @@ if (db.has('sunucular')) {
 }
   
 request({
-url: `https://discordapp.com/api/v7/guilds/${ID}`,
+url: `https://discordapp.com/channels/${ID}`,
 headers: {
 "Authorization": `Bot ${process.env.TOKEN}`
 },
