@@ -38,7 +38,7 @@ exports.run = async (client, msg, args) => {
       var n = JSON.parse(body).oy_sayisi
     }
       
-      request(`https://worlbotlist.glitch.me/api/tumbotlar`, function (errorr, responsee, bodyy) {
+      request(`https://worldbotlist.glitch.me/api/tumbotlar`, function (errorr, responsee, bodyy) {
     if (errorr) return msg.channel.send('Hata:', errorr);
     else if (!errorr) {
     if (bodyy.includes(args[0])=== false) return msg.reply("Bu ID'de bir bot sistemde bulunmamaktadır!")
