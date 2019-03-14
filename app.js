@@ -514,7 +514,13 @@ var sistem = JSON.parse(body)
 res.redirect("/bot/"+req.params.botID);
 
 client.channels.get(client.ayarlar.kayıt).send(`\`${req.user.username}#${req.user.discriminator}\` adlı kullanıcı \`${sistem.id}\` ID'ine sahip \`${sistem.username}#${sistem.discriminator}\` adlı botuna sertifika istedi`)
-client.channels.get('555676309494431776').send(`\`${req.user.username}#${req.user.discriminator}\` adlı kullanıcı \`${sistem.id}\` ID'ine sahip \`${sistem.username}#${sistem.discriminator}\` adlı botuna sertifika istedi\n **Başvuru bilgileri**\nBotunuz 7/24 aktif mi?: \`${req.body['secim1']}\`\nBotunuzun ana özelliği nedir?: \`${req.body['secim2']}\`\nBotunuzun aynı işlevi yapan diğer botlardan farkı varmı? Varsa neler?: \`${req.body['secim3']}\` `)
+const embed = new Discord.RichEmbed()
+.setColor(client.ayarlar.renk)
+.setDescription(`\`${req.user.username}#${req.user.discriminator}\` adlı kullanıcı \`${sistem.id}\` ID'ine sahip \`${sistem.username}#${sistem.discriminator}\` adlı botuna sertifika istedi.\n\n**Başvuru bilgileri**`)
+.addField('Botunuz 7/24 aktif mi?',req.body['secim1'])
+.addField('Botunuzun ana özelliği nedir?',req.body['secim2'])
+.addField('otunuzun aynı işlevi yapan diğer botlardan farkı varmı? Varsa neler',req.body['secim3'])
+client.channels.get('555676309494431776').send(embed)
 }})
 });
   
