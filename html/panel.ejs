@@ -6,8 +6,8 @@
        <img src="https://cdn.discordapp.com/avatars/<%=user.id%>/<%=user.avatar%>.png?size=512" class="rounded-circle panell">
        <h5 style="color:#333"><%=user.username%>#<%=user.discriminator%></h5>
       <h6 style="color:#333">Botların;</h6>
+  </div>
   
-
   <div class="cards">
   <% if (bot.ayar.has('botlar')) { %>
        <% if (bot.ayar.has(`kbotlar.${user.id}`)) { %>   
@@ -55,8 +55,7 @@
 <% } %>
   <% } %>
 </div>
-  
-  </div>
+      
       <% } else if (!bot.ayar.has(`kbotlar.${user.id}`)) {%>
            <h5 style="color:#222">
              Sistemde hiç sana ait bot bulunmuyor.
