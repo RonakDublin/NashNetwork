@@ -701,8 +701,14 @@ background: #f5f5f5;
     -webkit-box-flex: 0;
     -ms-flex: 0 0 33.3333333333%;
     flex: 0 0 33.3333333333%;
-    max-width: 27.333333% !important;
+    max-width: 23.333333% !important;
 }
+
+}
+
+@media (min-width: 1200px) {
+.container {
+    max-width: 1240px !important;
 }
 
 ::selection {
