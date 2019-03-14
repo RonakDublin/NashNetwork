@@ -8,6 +8,7 @@
       <h6 style="color:#333">Botların;</h6>
   </div>
   
+  <div class="cards">
   <% if (bot.ayar.has('botlar')) { %>
        <% if (bot.ayar.has(`kbotlar.${user.id}`)) { %>   
 
@@ -15,11 +16,13 @@
 <% var idd = Object.keys(bot.ayar.fetch('botlar'))[i] %>
  <%  if (bot.ayar.fetch(`botlar.${idd}.sahipid`) === user.id) { %>
   <div class="col-12 col-sm-6 col-md-4" style="display:inline-block;">
-        <div class="card card-lg botcard" style="background-color:#fff; width:16rem;">
-     <div align="center" class="card-img">
-         <a href="/bot/<%=idd%>"><img src="<%=bot.ayar.fetch(`botlar.${idd}.avatar`)%>" class="card-img-top" alt="Bot Avatar"></a>
-       <% if (bot.ayar.has(`botlar.${idd}.sertifika`) === true) { %>
-       <br><br><a style="color:darkorange"><img src="https://cdn.discordapp.com/emojis/522886304615366676.png" width="30px" height="30px"> Sertifikalı</a><br>
+        <div class="cards2" style="background-color:#fff; width:16rem;">
+       <center>
+       <a href="/bot/<%=idd%>"><img src="<%=bot.ayar.fetch(`botlar.${idd}.avatar`)%>" class="card-img-top" alt="Bot Avatar" tite="<%=bot.useful.seg(bot.ayar.fetch(`botlar.${idd}.isim`), 5)%>"></a>
+      </center>
+          
+         <% if (bot.ayar.has(`botlar.${idd}.sertifika`) === true) { %>
+ <span class="cards-sertifika"><a style="color:darkorange"><img src="https://cdn.discordapp.com/emojis/522886304615366676.png" width="30px" height="30px" alt="Sertifikalı" title="Sertifikalı"></a><span>
        <% } %>
 
       <%  if(bot.ayar.fetch(`botlar.${idd}.durum`) === 'Beklemede' || !bot.ayar.has(`botlar.${idd}.durum`)) { %>
@@ -36,7 +39,6 @@
 
        <div class="badge badge-primary"><strong style='color: white;'>Oy: </strong><span style='color:whitesmoke;text-transform: none;'><%=bot.ayar.fetch(`botlar.${idd}.oy`)||0%></span></div>
                     <div style="background-color:grey; color:#fff" class="badge badge-default"><%=bot.ayar.fetch(`botlar.${idd}.kutuphane`)%></div>
-                            </div>
                              <div align="center" style="background-color:#fff" class="card-block">
                                 <div class="card-title">
                                   <h4><a style="color:#222"><%=bot.useful.seg(bot.ayar.fetch(`botlar.${idd}.isim`), 5)%></a></h4>
