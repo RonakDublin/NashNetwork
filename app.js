@@ -727,30 +727,23 @@ renderTemplate(res, req, "hataaa.ejs")
 
 app.get("/sunucuekle", checkAuth, (req, res) => {
  
-renderTemplate(res, req, "botekle.ejs")
+renderTemplate(res, req, "sunucuekle.ejs")
 });
 
-app.post("/botekle", checkAuth, (req, res) => {
+app.post("/sunucuekle", checkAuth, (req, res) => {
 
 let ayar = req.body
 
-if (ayar === {} || !ayar['botid'] || !ayar['botprefix'] || !ayar['kutuphane'] || !ayar['kisa-aciklama'] || !ayar['uzun-aciklama'] || !ayar['etikett']) return res.redirect('/botyonetim/hata')
+if (ayar === {} || !ayar['sunucuid'] || !ayar['sunucu-aciklama'] ) return res.redirect('/botyonetim/hata')
 
-let ID = ayar['botid']
+let ID = ayar['sunucuid']
 
-if (db.has('botlar')) {
-    if (Object.keys(db.fetch('botlar')).includes(ID) === true) return res.redirect('/botekle/hata')
+if (db.has('sunucular')) {
+    if (Object.keys(db.fetch('sunucular')).includes(ID) === true) return res.redirect('/sunucuekle/hata')
 }
   
-  var tag = ''
-  if (Array.isArray(ayar['etikett']) === true) {
-    var tag = ayar['etikett']
-  } else {
-    var tag = new Array(ayar['etikett'])
-  }
-
 request({
-url: `https://discordapp.com/api/v7/users/${ID}`,
+url: `https://discordapp.com/api/v7/guilds/${ID}`,
 headers: {
 "Authorization": `Bot ${process.env.TOKEN}`
 },
@@ -759,10 +752,10 @@ if (error) return console.log(error)
 else if (!error) {
 var sistem = JSON.parse(body)
 
-db.set(`botlar.${ID}.id`, sistem.id)
-db.set(`botlar.${ID}.isim`, sistem.username+"#"+sistem.discriminator)
+db.set(`sunucular.${ID}.id`, sistem.id)
+db.set(`sunucular.${ID}.isim`, sistem.username+"#"+sistem.discriminator)
 
-db.set(`botlar.${ID}.avatar`, `https://cdn.discordapp.com/avatars/${sistem.id}/${sistem.avatar}.png`)
+db.set(`sunucular.${ID}.avatar`, `https://cdn.discordapp.com/icons/${sistem.id}/${sistem.icon}.png`)
 
 request({
 url: `https://discordapp.com/api/v7/users/${req.user.id}`,
@@ -774,32 +767,19 @@ if (error) return console.log(error)
 else if (!error) {
 var sahip = JSON.parse(body)
 
-db.set(`botlar.${ID}.prefix`, ayar['botprefix'])
-db.set(`botlar.${ID}.kutuphane`, ayar['kutuphane'])
-db.set(`botlar.${ID}.sahip`, sahip.username+"#"+sahip.discriminator)
-db.set(`botlar.${ID}.sahipid`, sahip.id)
-db.set(`botlar.${ID}.kisaaciklama`, ayar['kisa-aciklama'])
-db.set(`botlar.${ID}.uzunaciklama`, ayar['uzun-aciklama'])
-db.set(`botlar.${ID}.etiket`, tag)
-if (ayar['botsite']) {
-db.set(`botlar.${ID}.site`, ayar['botsite'])
-}
-if (ayar['github']) {
-db.set(`botlar.${ID}.github`, ayar['github'])
-}
-if (ayar['botdestek']) {
-db.set(`botlar.${ID}.destek`, ayar['botdestek'])
-}
+db.set(`sunucular.${ID}.sahip`, sahip.username+"#"+sahip.discriminator)
+db.set(`sunucular.${ID}.sahipid`, sahip.id)
+db.set(`sunucular.${ID}.sunucuaciklama`, ayar['sunucuaciklama'])
 
-db.set(`kbotlar.${req.user.id}.${ID}`, db.fetch(`botlar.${ID}`))
+db.set(`ksunucular.${req.user.id}.${ID}`, db.fetch(`sunucular.${ID}`))
 
 res.redirect("/kullanici/"+req.params.userID+"/panel");
 
-client.channels.get(client.ayarlar.kayıt).send(`\`${req.user.username}#${req.user.discriminator}\` adlı kullanıcı \`${sistem.id}\` ID'ine sahip \`${sistem.username}#${sistem.discriminator}\` adlı botu ile başvuru yaptı!`)
+//client.channels.get(client.ayarlar.kayıt).send(`\`${req.user.username}#${req.user.discriminator}\` adlı kullanıcı \`${sistem.id}\` ID'ine sahip \`${sistem.username}#${sistem.discriminator}\` adlı botu ile başvuru yaptı!`)
 
-if (client.users.has(req.user.id) === true) {
-  client.users.get(req.user.id).send(`\`${sistem.username}#${sistem.discriminator}\` adlı botunuz sitemize eklendi incelendikten sonra eklenicek.`)
-}
+//if (client.users.has(req.user.id) === true) {
+ // client.users.get(req.user.id).send(`\`${sistem.username}#${sistem.discriminator}\` adlı botunuz sitemize eklendi incelendikten sonra eklenicek.`)
+//}
 
 }})
 }})
