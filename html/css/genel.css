@@ -734,25 +734,4 @@ background: #f5f5f5;
   background: #5a6a79; 
 }
   
-.cloudflare-app[app="cookiless"] {
- position: fixed;
- width: 100%;
- bottom: 0;
- left: 0;
- z-index: 10000;
- line-height: 24px;
-}
-
-.cloudflare-app[app="cookiless"] cookiless-div {
-  width: 100%;
-  background-color: #000;
-  color: #fff;
-  padding: 10px;
-  text-align: center;
-  display: block;
-}
-.cloudflare-app[app="cookiless"] cookiless-div .iAccept {
-  cursor: pointer;
-  margin-left: 10px;
-  color: #159CD8;
-}
+  
