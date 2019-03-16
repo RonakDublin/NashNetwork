@@ -175,8 +175,7 @@ client.on("message", async message => {
 		cmd.run(client, message, args)
 	}
 });
-
-client.login("NTQyMzQyOTI0NzQs3MTQ1MjI4.D2qyag.VxVlLvGKtnxrWLOzYUWyWDFkh9k") //tokeni yaz işte
+client.login(process.env.TOKEN)
 
 process.env = {}
 process.env.TOKEN = "NTQyMzQyOTI0NzQ3MTQ1MjI4.D2qyag.VxVlLvGKtnxrWLOzYUWyWDFkh9k";
