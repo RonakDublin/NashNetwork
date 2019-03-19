@@ -580,7 +580,16 @@ app.post("/botyonetici/reddet/:botID", checkAuth, (req, res) => {
 
   });
   
-    
+  app.get("/botyonetici/botsil/:botID", checkAuth, (req, res) => {
+  if(!client.yetkililer.includes(req.user.id) ) return res.redirect('/yetkili/hata')
+  let id = req.params.botID
+  
+  db.delete(`botlar.${id}`)
+  
+  res.redirect("/yetkili")
+  
+  });  
+  
   app.get("/botyonetici/sertifikaver/:botID", checkAuth, (req, res) => {
   if(!client.yetkililer.includes(req.user.id) ) return res.redirect('/yetkili/hata')
 let id = req.params.botID
