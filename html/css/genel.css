@@ -1,5 +1,5 @@
 body {
-	background: #fff;
+	background: #f9f9f9;
 }
 
 a{
@@ -22,7 +22,7 @@ h6:link, h6:visited {
 }
 
 .ustmenu {
-    background: #1976D2;
+    background: linear-gradient(to right,#542fe6 0,#643dff 100%);
     padding: 35px;
     top: 0px;
     margin: 0px;
@@ -170,7 +170,7 @@ margin-bottom: 20px !important;
 }
 
 .footer {
-    background: #1976d2;
+    background: linear-gradient(to right,#542fe6 0,#643dff 100%);
     width: 100%;
     float: left;
     font-family: 'Open-Sans', sans-serif;
@@ -221,7 +221,7 @@ margin-bottom: 20px !important;
 
 .footer ul li a {
     color: #fff;
-    background: #3d4d5d;
+    background: rgba(0, 0, 0, 0.27);
     padding: 5px 10px;
     border-radius: 2px;
 }
