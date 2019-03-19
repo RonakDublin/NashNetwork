@@ -15,10 +15,10 @@ document.title = title;
     %>
        <img src="https://cdn.discordapp.com/avatars/<%=kisi.id%>/<%=kisi.avatar%>.png?size=512" class="rounded-circle panell">
        <h5 style="color:#333"><%=kisi.username%>#<%=kisi.discriminator%></h5>
-       <a href="/kullanici/<%=kisi.id%>/profil" class="btn btn-default" style="background-color:#333; color:#fff"><%=txt%></a>
+       <a href="/kullanici/<%=kisi.id%>/profil" class="btn btn-default" style="background:linear-gradient(to right,#542fe6 0,#643dff 100%); color:#fff"><%=txt%></a>
        <% if (user) { %>
        <% if (user.id === kisi.id) { %>
-       <a href="/kullanici/<%=kisi.id%>/panel" class="btn btn-default" style="background-color:#333; color:#fff">Panele gitmek için tıkla</a>
+       <a href="/kullanici/<%=kisi.id%>/panel" class="btn btn-default" style="background:linear-gradient(to right,#542fe6 0,#643dff 100%); color:#fff">Panele gitmek için tıkla</a>
        <% } %>
        <% } %>
   </div>

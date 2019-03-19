@@ -7,7 +7,7 @@ exports.run = async (client, msg, args) => {
     if(!args[0]) {
       return msg.channel.send(new Discord.RichEmbed().setDescription('Lütfen bir bot ID\'i giriniz!').setColor("RANDOM"))
     }
-    request(`https://worldbotlist.glitch.me/api/botlar/${args[0]}`, function (error, response, body) {
+    request(`https://worldbotlist.ml/api/botlar/${args[0]}`, function (error, response, body) {
     if (error) return msg.channel.send('Hata:', error);
     else if (!error) {
       var a = JSON.parse(body).isim
@@ -38,7 +38,7 @@ exports.run = async (client, msg, args) => {
       var n = JSON.parse(body).oy_sayisi
     }
       
-      request(`https://worldbotlist.glitch.me/api/tumbotlar`, function (errorr, responsee, bodyy) {
+      request(`https://worldbotlist.ml/api/tumbotlar`, function (errorr, responsee, bodyy) {
     if (errorr) return msg.channel.send('Hata:', errorr);
     else if (!errorr) {
     if (bodyy.includes(args[0])=== false) return msg.reply("Bu ID'de bir bot sistemde bulunmamaktadır!")
@@ -59,7 +59,7 @@ exports.run = async (client, msg, args) => {
     .addField("Web Sitesi", j)
     .addField('Github', k)
     .addField('Destek Sunucusu', i)
-    .setFooter('https://worldbotlist.glitch.me sisteminde bot aramaktadır.')
+    .setFooter('https://worldbotlist.ml sisteminde bot aramaktadır.')
     msg.channel.send({embed})
   })
 };
