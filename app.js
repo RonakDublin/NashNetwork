@@ -486,6 +486,31 @@ res.redirect('/bot/'+req.params.botID)
 
 });
   
+  
+  app.get("/bot/:botID/oylarisil", checkAuth, (req, res) => {
+
+var id = req.params.botID
+let user = req.user.id
+
+var saat = `${new Date().getHours() + 3}:${new Date().getMinutes()}:${new Date().getSeconds()}`
+
+if (db.has(`oylar.${id}.${user}`) === true) {
+  if (db.fetch(`oylar.${id}.${user}`) !== saat) {
+    res.redirect('/bot/'+req.params.botID+'/hata')
+    return
+  } else if (db.fetch(`oylar.${id}.${user}`) === saat) {
+  db.delete(`botlar.${id}.oy`, 1)
+  db.delete(`oylar.${id}.${user}`, saat)
+  }
+} else {
+  db.delete(`botlar.${id}.oy`, 1)
+  db.delete(`oylar.${id}.${user}`, saat)
+}
+
+res.redirect('/bot/'+req.params.botID)
+
+});
+  
 app.get("/kullanici/:userID/panel/:botID/sertifikaiste", checkAuth, (req, res) => {
 var id = req.params.botID
 renderTemplate(res, req, "sertifikaiste.ejs", {id})
