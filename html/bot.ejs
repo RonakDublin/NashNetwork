@@ -16,10 +16,24 @@ document.title = title;
                         <div class="post-thumbnail">
                             <div align="center"><img src="<%=bot.ayar.fetch(`botlar.${id}.avatar`)%>"
                                 width="300" height="300" class="botavatar"><br><span class="botisim"><%=bot.ayar.fetch(`botlar.${id}.isim`)%></span>
-                              <h5 class="kisaaciklama"><%=bot.ayar.fetch(`botlar.${id}.kisaaciklama`)%></h5></div>
+                              <h5 class="kisaaciklama"><%=bot.ayar.fetch(`botlar.${id}.kisaaciklama`)%></h5>
+                          <%let botdurum;
+    if (bot.users.get(bot.ayar.fetch(`botlar.${id}.id`)).presence.status === 'dnd') botdurum = "Rahatsız Etmeyin"
+    if (bot.users.get(bot.ayar.fetch(`botlar.${id}.id`)).presence.status === 'online') botdurum = "Çevrim İçi"
+    if (bot.users.get(bot.ayar.fetch(`botlar.${id}.id`)).presence.status === 'idle') botdurum = "Boşta"
+    if (bot.users.get(bot.ayar.fetch(`botlar.${id}.id`)).presence.status === 'offline') botdurum = "Çevrim Dışı"
+    let bodurum2
+    if (bot.users.get(bot.ayar.fetch(`botlar.${id}.id`)).presence.status === 'dnd') botdurum2 = "dnd"
+    if (bot.users.get(bot.ayar.fetch(`botlar.${id}.id`)).presence.status === 'online') botdurum2 = "online"
+    if (bot.users.get(bot.ayar.fetch(`botlar.${id}.id`)).presence.status === 'idle') botdurum2 = "idle"
+    if (bot.users.get(bot.ayar.fetch(`botlar.${id}.id`)).presence.status === 'offline') botdurum2 = "offline"
+                              %>
+                            <span class="botdurum"><span class="botdurum-icon-<%= botdurum2 %>">.</span> <%= botdurum %></span>  
+                          
+                          </div>
                           
         <div alig ="left">
-          <button class="botprefix"><%=bot.ayar.fetch(`botlar.${id}.prefix`)%></button>
+          <button class="botprefix" style="cursor:default;"><span class="botprefix-sol">Prefix:</span> <%=bot.ayar.fetch(`botlar.${id}.prefix`)%></button>
           
       <%if (bot.ayar.has(`botlar.${id}.destek`)){%>
                  <a href="<%=bot.ayar.fetch(`botlar.${id}.destek`)%>"><button class="destek">Destek Sunucusu</button></a>
