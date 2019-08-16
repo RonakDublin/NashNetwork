@@ -23,7 +23,7 @@ h6:link, h6:visited {
 }
 
 .ustmenu {
-    background: linear-gradient(to right,#542fe6 0,#643dff 100%);
+    background: linear-gradient(to right,#1bc8cc 0,#643dff 100%);
     padding: 35px;
     top: 0px;
     margin: 0px;
@@ -180,7 +180,7 @@ margin-bottom: 20px !important;
 }
 
 .footer {
-    background: linear-gradient(to right,#542fe6 0,#643dff 100%);
+    background: linear-gradient(to right,#1bc8cc 0,#643dff 100%);
     width: 100%;
     float: left;
     font-family: 'Open-Sans', sans-serif;
