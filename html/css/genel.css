@@ -58,6 +58,25 @@ h6:link, h6:visited {
 
 
 
+
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+ 
+::-webkit-scrollbar-thumb {
+  background: #3d4d5d; 
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #5a6a79; 
+}
+
+
 .logo{
     font-family: Roboto;
     float: left;
