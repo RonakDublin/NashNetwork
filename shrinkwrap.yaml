@@ -2262,7 +2262,7 @@ packages:
     dev: false
     resolution:
       integrity: sha512-zTLo8UcVYtDU3gdeaFu2Xu0n0EvelfHDGuqtNIn5RO7yQj4H1TqNdBc/yZjxnWA0PVB8D3Woyp0i5B43JwQ6Vw==
-  /npm/6.9.2:
+  /npm/6.10.3:
     bundledDependencies:
       - abbrev
       - ansicolors
@@ -2297,6 +2297,7 @@ packages:
       - hosted-git-info
       - iferr
       - imurmurhash
+      - infer-owner
       - inflight
       - inherits
       - ini
@@ -2389,7 +2390,7 @@ packages:
     dev: false
     hasBin: true
     resolution:
-      integrity: sha512-b0sEGRYrVdcV/DedLrqV4VMpdMHJbvpt9bopivh4K9RisHFMbj+G6RNbB6lRdr9rpYIoqHG9YP9CYmxdI9k81g==
+      integrity: sha512-AH2uhSRaIMll7xz1JuLA6XbZu5k6DMSc77U6uWfuyBch4EzwpEc5dd54/OsX4Njioi7fSL7YmuPQbqKE2qiklw==
   /npmlog/4.1.2:
     dependencies:
       are-we-there-yet: 1.1.5
@@ -3396,7 +3397,7 @@ packages:
       integrity: sha1-BbKHW68ElQ4n71HphG8e/wRxaJM=
   /useful-tools/0.2.6:
     dependencies:
-      npm: 6.9.2
+      npm: 6.10.3
     deprecated: true
     dev: false
     resolution:
