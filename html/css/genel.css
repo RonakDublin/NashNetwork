@@ -53,9 +53,11 @@ h6:link, h6:visited {
     box-shadow: inset 0 -2px 0 0 #fff;
 }
 
-.ustmenu2 li a.active{
+.ustmenu2 .active{
     box-shadow: inset 0 -2px 0 0 #fff;
 }
+
+
 
 
 ::-webkit-scrollbar {
