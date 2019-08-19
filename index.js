@@ -39,6 +39,26 @@ client.on('ready', async () => {
   console.log("Aktif!")
 });
 
+setInterval(() => {
+
+	if (db.has('botlar') && db.has('kbotlar')) {
+
+for (var i = 0; i < Object.keys(db.fetch('kbotlar')).length; i++) {
+for (var x = 0; x < Object.keys(db.fetch('botlar')).length; x++) {
+var bot = Object.keys(db.fetch('botlar'))[x]
+var user = Object.keys(db.fetch('kbotlar'))[i]
+var saat = `${new Date().getHours() + 3}:${new Date().getMinutes()}:${new Date().getSeconds()}`
+if (db.has(`oylar.${bot}.${user}`)) {
+   setTimeout(() => {
+        db.delete(`oylar.${bot}.${user}`, saat)
+    }, require('ms')(`${client.useful.seg(db.fetch(`oylar.${bot}.${user}`), 6)}h`));
+}
+}
+}
+
+	}
+
+}, 10000);
 
 const chalk = require('chalk')
 
