@@ -1,9 +1,11 @@
+
 <%- include('ek/header', {bot, user, path}) %>
 <script type="text/javascript">
-var title = "WorldBotList - Düzenle";
+var title = "WordBotList - Düzenle";
 document.title = title;
 </script>
-<div class="container is-fullhd">	
+<div class="container is-fullhd">
+	<% if(bot.ayar.fetch(`botlar.${id}.sahipid`) === user.id) { %>
  <form method="post">
 				
    <div class="jumbotron">
@@ -80,7 +82,7 @@ document.title = title;
         <%= //bot.ayar.fetch(`${id}.uzunaciklama`) %>
         </code></pre>-->
       
-      <textarea name="uzun-aciklama" id="uzun-aciklama" required="required">      
+      <textarea name="uzun-aciklama" id="uzun-aciklama" value="<%=bot.ayar.fetch(`${id}.uzunaciklama`)%>" required="required">      
         <%= bot.ayar.fetch(`botlar.${id}.uzunaciklama`) %>
       </textarea>
      <br>
@@ -151,6 +153,11 @@ document.title = title;
 					<button type="submit" class="butonss"><i class="fa fa-save fa-fw"></i> Düzenle<i aria-hidden='true'></i></button>
    </div>
 			</form>
+			<% } else { %>
+			<div class="jumbotron">
+			Hey sen bu botun sahibi değilsin düzenleyemessin.
+			</div>
+			<% } %>
 		</div>
 	</div>
 </div>
