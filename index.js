@@ -47,10 +47,9 @@ for (var i = 0; i < Object.keys(db.fetch('kbotlar')).length; i++) {
 for (var x = 0; x < Object.keys(db.fetch('botlar')).length; x++) {
 var bot = Object.keys(db.fetch('botlar'))[x]
 var user = Object.keys(db.fetch('kbotlar'))[i]
-var saat = `${new Date().getHours() + 3}:${new Date().getMinutes()}:${new Date().getSeconds()}`
 if (db.has(`oylar.${bot}.${user}`)) {
    setTimeout(() => {
-        db.delete(`oylar.${bot}.${user}`, saat)
+        db.delete(`oylar.${bot}.${user}`)
     }, require('ms')(`${client.useful.seg(db.fetch(`oylar.${bot}.${user}`), 6)}h`));
 }
 }
@@ -59,6 +58,7 @@ if (db.has(`oylar.${bot}.${user}`)) {
 	}
 
 }, 10000);
+
 
 const chalk = require('chalk')
 
@@ -177,7 +177,7 @@ client.on("message", async message => {
 });
 
 
-client.login("NTQyMzQyOTI0NzQ3MTQ1MjI4.XVpFUg.-iJiwbjwHDGso4LKS00IsjY2tl8") //tokeni yaz işte
+client.login("NTQyMzQyOTI0NzQ3MTQ1MjI4.XQ1Cyg.mE51A87NFXfvgSAG3qqVeZXolJ4") //tokeni yaz işte
 
 process.env = {}
 process.env.TOKEN = "NTQyMzQyOTI0NzQ3MTQ1MjI4.XQ1Cyg.mE51A87NFXfvgSAG3qqVeZXolJ4";

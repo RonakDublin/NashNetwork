@@ -60,8 +60,8 @@
     "cowsay": "^1.4.0",
     "dateformat": "^3.0.3",
     "superagent": "^5.0.1",
-    "html-tags": "^3.0.0",
-    "useful-tools": "^0.2.6"
+    "useful-tools": "^0.2.6",
+    "html-tags": "^3.0.0"
   },
   "engines": {
     "node": "9.x"
