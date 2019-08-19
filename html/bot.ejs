@@ -21,8 +21,8 @@ document.title = title;
                               <h5 class="kisaaciklama"><%=bot.ayar.fetch(`botlar.${id}.kisaaciklama`)%></h5>
                             <%let botdurum = bot.users.filter(user => user.id === bot.ayar.fetch(`botlar.${id}.id`)).map(user => user.presence.status)
                               %>
-                              <%var durum = ''%>
-                              
+                      
+                            
                             <span class="botdurum"><span class="botdurum-icon-<%= botdurum %>">.</span></span>  
                           
                           </div>
