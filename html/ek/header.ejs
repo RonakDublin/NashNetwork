@@ -110,7 +110,7 @@ window.onclick = function(event) {
   
    <li><i class="fas fa-bars dropbtn" style="cursor:pointer;color:#fff !important;" onclick="myFunction()"></i></li>
     <div id="myDropdown" class="dropdown-content">
-   <li><a href="/botlar">Botlar</a></li>
+      <li><a href="/botlar">Botlar</a></li>
 			<li><a href="/api">API</a></li>
 			<li><a href="/sertifika">Sertifika</a></li>
 			<li><a href="/hakkimizda">Hakkımızda</a></li>
@@ -131,21 +131,21 @@ window.onclick = function(event) {
     </div>
 <div class="logo"><a href="/"><i class="fas fa-robot"></i> WorldBotList</a></div>
 <div class="ustmenu2">
-    <li><a href="/">Ana sayfa</a></li>
-      <li><a href="/botlar">Botlar</a></li>
-			<li><a href="/api">API</a></li>
-			<li><a href="/sertifika">Sertifika</a></li>
-			<li><a href="/hakkimizda">Hakkımızda</a></li>
+    <li><a id='anasayfa' href="/">Ana sayfa</a></li>
+      <li><a id='botlar' href="/botlar">Botlar</a></li>
+			<li><a id='api' href="/api">API</a></li>
+			<li><a id='sertifika' href="/sertifika">Sertifika</a></li>
+			<li><a id='hakkimizda' href="/hakkimizda">Hakkımızda</a></li>
 			<% if (!user) { %>
       <li><a href="/giris">Giriş Yap</a></li>
       <% } else { %>
-      <li><a href="/botekle">Bot Ekle</a></li>
-			<li><a href="/kullanici/<%=user.id%>">
+      <li><a id="botekle" href="/botekle">Bot Ekle</a></li>
+			<li><a id='kullanici' href="/kullanici/<%=user.id%>">
       <img src="https://cdn.discordapp.com/avatars/<%=user.id%>/<%=user.avatar%>.png?size=32" width="25" height="25" class="d-inline-block align-middle rounded-circle" alt="Kullanıcı Avatar">
       <%=user.username%>
       </a></li>
       <% if (bot.yetkililer.includes(user.id) === true) { %>
-     <li> <a href="/yetkili">Yetkili Paneli</a></li>
+     <li> <a id='yetkili' href="/yetkili">Yetkili Paneli</a></li>
       <% } %>
   <li><a href="/cikis">Çıkış Yap</a></li>
       <% } %>	
