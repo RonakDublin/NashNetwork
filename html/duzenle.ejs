@@ -81,7 +81,9 @@ document.title = title;
         <!--<pre style="height:150px; background-color:#222; color:#fff;" name="uzun-aciklama" id="uzun-aciklama"><code>
         <%= //bot.ayar.fetch(`${id}.uzunaciklama`) %>
         </code></pre>-->
-      
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/simplemde/latest/simplemde.min.css">
+<script src="https://cdn.jsdelivr.net/simplemde/latest/simplemde.min.js"></script>
+     
       <textarea name="uzun-aciklama" id="uzun-aciklama" value="<%=bot.ayar.fetch(`${id}.uzunaciklama`)%>" required="required">      
         <%= bot.ayar.fetch(`botlar.${id}.uzunaciklama`) %>
       </textarea>
