@@ -83,6 +83,9 @@ document.title = title;
         </code></pre>-->
       <link rel="stylesheet" href="https://cdn.jsdelivr.net/simplemde/latest/simplemde.min.css">
 <script src="https://cdn.jsdelivr.net/simplemde/latest/simplemde.min.js"></script>
+     <script>
+var simplemde = new SimpleMDE({ element: document.getElementById("uzun-aciklama") }); 
+     </script>
      
       <textarea name="uzun-aciklama" id="uzun-aciklama" value="<%=bot.ayar.fetch(`${id}.uzunaciklama`)%>" required="required">      
         <%= bot.ayar.fetch(`botlar.${id}.uzunaciklama`) %>
