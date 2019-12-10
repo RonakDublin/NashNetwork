@@ -71,7 +71,12 @@ document.getElementById("botekle").classList.add('active');
       <input type="text" name="kisa-aciklama" id="kisa-aciklama" placeholder="Botunuzun kısa açıklamasını yazınız." maxlength="50" required="required">
      <br>
      <label><i aria-hidden="true"></i>Uzun Açıklama <a style="color:red">*</a></label>
-     <p>(HTML Kodlar desteklemektedir)</p>
+     <p>(HTML ve Markdown desteklemekte)</p>
+           <link rel="stylesheet" href="https://cdn.jsdelivr.net/simplemde/latest/simplemde.min.css">
+<script src="https://cdn.jsdelivr.net/simplemde/latest/simplemde.min.js"></script>
+     <script>
+var simplemde = new SimpleMDE({ element: document.getElementById("uzun-aciklama") }); 
+     </script>
      <textarea name="uzun-aciklama" id="uzun-aciklama"placeholder="Botunuzun uzun açıklamasını yazınız." minlength="100" required="required"></textarea>
      <br>
      <label><i aria-hidden="true"></i>Etiketler <a style="color:red">*</a></label>
