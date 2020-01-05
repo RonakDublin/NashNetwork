@@ -731,6 +731,26 @@ app.get("/api/botlar/:botID/oylar/:kullaniciID", (req, res) => {
    });
 
 });
+  
+  app.get("/bot/:botID/tokenal", (req, res) => {
+var id = req.params.botID
+
+request({
+url: `https://discordapp.com/api/v7/users/${id}`,
+headers: {
+"Authorization": `Bot ${process.env.TOKEN}`
+},
+}, function(error, response, body) {
+if (error) return console.log(error)
+else if (!error) {
+var sistem = JSON.parse(body)
+
+}
+})
+
+renderTemplate(res, req, 'tokenal.ejs', {id})
+
+});
 
 app.listen(3000);
 
