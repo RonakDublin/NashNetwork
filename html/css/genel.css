@@ -541,7 +541,7 @@ background: #1976d2;
 .table th, .table td {
     padding: 10px;
     vertical-align: top;
-    border-top: 1px solid #ddd;
+    border-top: 1px solid #333;
 }
 
 .ekip{
