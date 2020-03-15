@@ -46,28 +46,22 @@ document.getElementById("anasayfa").classList.add('active');
    <% if(bot.ayar.has(`botlar.${idd}.durum`) === true) { %>
     <% if (bot.ayar.fetch(`botlar.${idd}.durum`) === "Onaylı") { %>
       <% if (bot.ayar.has(`botlar.${idd}.sertifika`) === true) { %>
-       <div class="col-12 col-sm-6 col-md-4">
-        <div class="cards2" style="background-color:#fff; width:16rem;">
-        <div value="<%=bot.useful.seg(bot.ayar.fetch(`botlar.${idd}.isim`), 5)%>" align="center" class="card-img">
-    <center><a href="/bot/<%=idd%>"><img src="<%=bot.ayar.fetch(`botlar.${idd}.avatar`)%>" class="card-img-top" alt="<%=bot.useful.seg(bot.ayar.fetch(`botlar.${idd}.isim`), 5)%>" title="<%=bot.useful.seg(bot.ayar.fetch(`botlar.${idd}.isim`), 5)%>"></a></center>
-      <span class="cards-sertifika"><a><img src="https://cdn.discordapp.com/emojis/522886304615366676.png" width="30px" height="30px" alt="Sertifikalı" title="Sertifikalı"></a></span> 
-      <center>
-      <div class="cards-oy">Oy: </strong><%=bot.ayar.fetch(`botlar.${idd}.oy`)||0%></div>
-      <div class="cards-kutuphane"><%=bot.ayar.fetch(`botlar.${idd}.kutuphane`)%></div>
-    </center>
-         </div>
-  <center>
-      <div class="cards-botisim"><a style="color:#222"><%=bot.useful.seg(bot.ayar.fetch(`botlar.${idd}.isim`), 5)%></a></div>
-      <div class="cards-sahipisim"><%=bot.ayar.fetch(`botlar.${idd}.sahip`)%></div>
-      <div class="cards-kisaaciklama"><%=bot.ayar.fetch(`botlar.${idd}.kisaaciklama`)%></div>
-    </center>
-    <div class="cards-alt">
-     <a href="/bot/<%=idd%>">Görüntüle</a>
-     <a href="https://discordapp.com/oauth2/authorize?client_id=<%=idd%>&scope=bot&permissions=8" style="border-right:none !important;">Davet Et</a>
-     </div>
-         
+        <div class="card" style="width: 500px;margin-right: 10px;margin-bottom: 8px;">
+    <div class="row no-gutters">
+        <div class="col-md-5">
+        <img data-toggle="tooltip" data-placement="bottom"  title="<%=bot.useful.seg(bot.ayar.fetch(`botlar.${idd}.isim`), 5)%>" src="<%=bot.ayar.fetch(`botlar.${idd}.avatar`)%>" class="card-img-top h-100" style="border-radius: 50%;width: 180px;height: 180px !important;margin: 14px" alt="..." onerror="this.onerror=null;this.src='https://cdn.discordapp.com/attachments/415626207607128076/526891779992322078/sunucuicon.png'">
+        </div>
+        <div class="col-md-7">
+            <div class="card-body">
+        <h5 class="card-title"><%=bot.useful.seg(bot.ayar.fetch(`botlar.${idd}.isim`), 5)%></h5>
+        <h6 style="user-select:none;">Kütüphane: <%=bot.ayar.fetch(`botlar.${idd}.kutuphane`)%>| <span class="badge badge-secondary">OY: <%=bot.ayar.fetch(`botlar.${idd}.oy`)||0%></span></h6>
+        <p class="card-text"><%=bot.ayar.fetch(`botlar.${idd}.kisaaciklama`)%></p>
+        <p class="card-text"><a href="/bot/<%=idd%>"class="btn btn-primary" >Görüntüle</a>
+        <a target="_blank" class="btn btn-primary" href="https://discordapp.com/oauth2/authorize?client_id=<%=idd%>&scope=bot&permissions=8">Davet Et</a></p>
+            </div>
+        </div>
     </div>
-    </div>
+</div>
       <% } %>
     <% } %>
     <% } %>
