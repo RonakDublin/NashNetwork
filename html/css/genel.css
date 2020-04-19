@@ -1,4 +1,6 @@
-
+body {
+	background: #f9f9f9;
+}
 
 a{
   text-decoration:none !important;
@@ -309,21 +311,18 @@ textarea {
 }
 
 table {
-  style="color:#fff"
   border-collapse: collapse;
   width: 100%;
-//  color:#333;
+  color:#333;
 }
 
 th, td {
-    style="color:#fff"
   text-align: left;
   padding: 8px;
 }
 
 tr:nth-child(even) {
     background-color: #333;
-    style="color:#fff"
     border-bottom: 1px solid #ddd;
     border-radius: 2px;
 }
@@ -540,9 +539,9 @@ background: #1976d2;
 }
 
 .table th, .table td {
-    style="color:#fff"
     padding: 10px;
     vertical-align: top;
+  color: #fff;
     border-top: 1px solid #333;
 }
 
