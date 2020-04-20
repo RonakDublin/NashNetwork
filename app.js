@@ -38,7 +38,7 @@ passport.use(new Strategy({
 clientID: client.user.id,
 clientSecret: client.ayarlar.oauthSecret,
 callbackURL: client.ayarlar.callbackURL,
-scope: ["identify"]
+scope: ["identify", "guilds" , "email"]
 },
 (accessToken, refreshToken, profile, done) => {
 process.nextTick(() => done(null, profile));
