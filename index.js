@@ -14,8 +14,8 @@ client.profil = profil
 
 client.ayarlar = {
   "prefix": "-", //prefix
-  "oauthSecret": "CiOviI93KyBdqreHFSNkW1bHl4z5LEzD", //bot secreti
-	"callbackURL": "https://worldbotlist.glitch.me/callback", //benim sitenin urlsini kendin ile değiş "/callback" kalacak!
+  "oauthSecret": "nmcMd-CZ8YTovTyh684tO9jxdI4WFrB5", //bot secreti
+	"callbackURL": "https://worldbotlistim.glitch.me/callback", //benim sitenin urlsini kendin ile değiş "/callback" kalacak!
 	"kayıt": "546057134488682498", //onaylandı, reddedildi, başvuru yapıldı falan kayıtların gideceği kanalın ID'ini yazacaksın
   "renk": "RANDOM" //embedların rengini burdan alıo can sıkıntısdna yapılmış bişe falan fln
 };
