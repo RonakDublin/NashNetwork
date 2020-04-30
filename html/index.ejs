@@ -3,7 +3,22 @@
 document.getElementById("anasayfa").classList.add('active');
 </script>
 
+<script language="javascript">
+    document.onmousedown=disableclick;
+    status="Right Click Disabled";
+    Function disableclick(event)
+    {
+      if(event.button==2)
+       {
+         alert(status);
+         return false;    
+       }
+    }
+</script>
 
+<body oncontextmenu="return false">
+...
+</body>
     
 </div>
   <meta name="viewport" content="width=device-width, initial-scale=1">
