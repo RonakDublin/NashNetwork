@@ -14,17 +14,17 @@ client.profil = profil
 
 client.ayarlar = {
   "prefix": "-", //prefix
-  "oauthSecret": "2fH1c3ZiR-xTGxRasIsaczoxOBbZeyZb", //bot secreti
-	"callbackURL": "https://worldbotlistim.glitch.me/callback", //benim sitenin urlsini kendin ile değiş "/callback" kalacak!
-	"kayıt": "546057134488682498", //onaylandı, reddedildi, başvuru yapıldı falan kayıtların gideceği kanalın ID'ini yazacaksın
+  "oauthSecret": "", //bot secreti
+	"callbackURL": "https://siteismi.glitch.me/callback", //benim sitenin urlsini kendin ile değiş "/callback" kalacak!
+	"kayıt": "kanal id", //onaylandı, reddedildi, başvuru yapıldı falan kayıtların gideceği kanalın ID'ini yazacaksın
   "renk": "RANDOM" //embedların rengini burdan alıo can sıkıntısdna yapılmış bişe falan fln
 };
 
 
 
-client.yetkililer = ['276829048943149057','348097494548348940'] //tüm yetkililerin ıdleri gelcek array
-client.webyetkililer = ['276829048943149057','348097494548348940', '315129141559033856'] //web yetkililerin ıdleri gelcek array
-client.sunucuyetkililer = ['276829048943149057','348097494548348940','315218945693188098', '315129141559033856'] //sunucu yetkililerin ıdleri gelcek array
+client.yetkililer = ['idler'] //tüm yetkililerin ıdleri gelcek array
+client.webyetkililer = ['idler'] //web yetkililerin ıdleri gelcek array
+client.sunucuyetkililer = ['idiler'] //sunucu yetkililerin ıdleri gelcek array
 
 //["id", "id2"]
 
@@ -179,7 +179,7 @@ client.on("message", async message => {
 });
 
 
-client.login("NTQwOTkyODg5NDk3NDUyNTc5.Xqa7ig.UQskU4ivW_w0F7HdfV6647odOT0") //tokeni yaz işte
+client.login("token") //tokeni yaz işte
 
 process.env = {}
-process.env.TOKEN = "NTQyMzQyOTI0NzQ3MTQ1MjI4.XVpjHw.k1rY9TTqh-R-My0S4ixMtM4koYk";
+process.env.TOKEN = "TOKEN";
