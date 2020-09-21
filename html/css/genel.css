@@ -17,6 +17,7 @@ h6:link, h6:visited {
 }
 
 .ustmenu {
+  font-family: 'Poppins', sans-serif;
     background: linear-gradient(to right,#1bc8cc 0,#643dff 100%);
     padding: 35px;
     top: 0px;
@@ -27,16 +28,19 @@ h6:link, h6:visited {
 }
 
 .ustmenu2{
+  font-family: 'Poppins', sans-serif;
     float:right;
     margin-top:-11px;
 }
 
 .ustmenu2 li {
+  font-family: 'Poppins', sans-serif;
     list-style-type: none;
     display: inline-block;
 }
 
 .ustmenu2 li a{
+  font-family: 'Poppins', sans-serif;
     color:#fff;
     font-family: Roboto;
     padding:26px;
