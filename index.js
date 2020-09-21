@@ -14,17 +14,17 @@ client.profil = profil
 
 client.ayarlar = {
   "prefix": "-", //prefix
-  "oauthSecret": "", //bot secreti
-	"callbackURL": "https://siteismi.glitch.me/callback", //benim sitenin urlsini kendin ile değiş "/callback" kalacak!
-	"kayıt": "kanal id", //onaylandı, reddedildi, başvuru yapıldı falan kayıtların gideceği kanalın ID'ini yazacaksın
-  "renk": "RANDOM" //embedların rengini burdan alıo can sıkıntısdna yapılmış bişe falan fln
+  "oauthSecret": "9s0BHyiu1ftG7-To5XmjjMlmSK3SHH8G", //bot secreti
+	"callbackURL": "https://botshell-list.glitch.me//callback", //benim sitenin urlsini kendin ile değiş "/callback" kalacak!
+	"kayıt": "757709423912288339", //onaylandı, reddedildi, başvuru yapıldı falan kayıtların gideceği kanalın ID'ini yazacaksın
+  "renk": "BLACK" //embedların rengini burdan alıo can sıkıntısdna yapılmış bişe falan fln
 };
 
 
 
-client.yetkililer = ['idler'] //tüm yetkililerin ıdleri gelcek array
-client.webyetkililer = ['idler'] //web yetkililerin ıdleri gelcek array
-client.sunucuyetkililer = ['idiler'] //sunucu yetkililerin ıdleri gelcek array
+client.yetkililer = ['698936255395921950'] //tüm yetkililerin ıdleri gelcek array
+client.webyetkililer = ['698936255395921950'] //web yetkililerin ıdleri gelcek array
+client.sunucuyetkililer = ['698936255395921950'] //sunucu yetkililerin ıdleri gelcek array
 
 //["id", "id2"]
 
@@ -179,7 +179,7 @@ client.on("message", async message => {
 });
 
 
-client.login("token") //tokeni yaz işte
+client.login("NzU3NzA5MTA5MjIxOTE2ODMz.X2kVmQ.-gwhFy6trQ5KE3QqWK36LgsHrmA") //tokeni yaz işte
 
 process.env = {}
-process.env.TOKEN = "TOKEN";
+process.env.TOKEN = "NzU3NzA5MTA5MjIxOTE2ODMz.X2kVmQ.-gwhFy6trQ5KE3QqWK36LgsHrmA";

@@ -1,6 +1,6 @@
 MIT License
 
-Copyright (c) 2020 K1at3s
+Copyright (c) 2020 TheSquize
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
