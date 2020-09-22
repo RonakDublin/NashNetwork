@@ -3,12 +3,7 @@ body {
 	background: #fff;
 }
 
-a{
-  text-decoration:none !important;
-}
-
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600');
-
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,600');
 
 
 h6:link, h6:visited {
