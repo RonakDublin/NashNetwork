@@ -14,7 +14,7 @@ client.profil = profil
 
 client.ayarlar = {
   "prefix": "-", //prefix
-  "oauthSecret": "9s0BHyiu1ftG7-To5XmjjMlmSK3SHH8G", //bot secreti
+  "oauthSecret": "", //bot secreti
 	"callbackURL": "https://botshell-list.glitch.me//callback", //benim sitenin urlsini kendin ile değiş "/callback" kalacak!
 	"kayıt": "757709423912288339", //onaylandı, reddedildi, başvuru yapıldı falan kayıtların gideceği kanalın ID'ini yazacaksın
   "renk": "BLACK" //embedların rengini burdan alıo can sıkıntısdna yapılmış bişe falan fln
@@ -179,7 +179,7 @@ client.on("message", async message => {
 });
 
 
-client.login("NzU3NzA5MTA5MjIxOTE2ODMz.X2kVmQ.-gwhFy6trQ5KE3QqWK36LgsHrmA") //tokeni yaz işte
+client.login("") //tokeni yaz işte
 
 process.env = {}
-process.env.TOKEN = "NzU3NzA5MTA5MjIxOTE2ODMz.X2kVmQ.-gwhFy6trQ5KE3QqWK36LgsHrmA";
+process.env.TOKEN = "";
