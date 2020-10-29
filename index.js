@@ -15,16 +15,16 @@ client.profil = profil
 client.ayarlar = {
   "prefix": "-", //prefix
   "oauthSecret": "", //bot secreti
-	"callbackURL": "https://botshell-list.glitch.me//callback", //benim sitenin urlsini kendin ile değiş "/callback" kalacak!
-	"kayıt": "757709423912288339", //onaylandı, reddedildi, başvuru yapıldı falan kayıtların gideceği kanalın ID'ini yazacaksın
-  "renk": "BLACK" //embedların rengini burdan alıo can sıkıntısdna yapılmış bişe falan fln
+	"callbackURL": "https://discord-botlist-area.glitch.me//callback", //benim sitenin urlsini kendin ile değiş "/callback" kalacak!
+	"kayıt": "771265631143723009", //onaylandı, reddedildi, başvuru yapıldı falan kayıtların gideceği kanalın ID'ini yazacaksın
+  "renk": "BLUE" //embedların rengini burdan alıo can sıkıntısdna yapılmış bişe falan fln
 };
 
 
 
-client.yetkililer = ['698936255395921950'] //tüm yetkililerin ıdleri gelcek array
-client.webyetkililer = ['698936255395921950'] //web yetkililerin ıdleri gelcek array
-client.sunucuyetkililer = ['698936255395921950'] //sunucu yetkililerin ıdleri gelcek array
+client.yetkililer = ['771265576097546250'] //tüm yetkililerin ıdleri gelcek array
+client.webyetkililer = ['771265580266553344'] //web yetkililerin ıdleri gelcek array
+client.sunucuyetkililer = ['771265578819911700'] //sunucu yetkililerin ıdleri gelcek array
 
 //["id", "id2"]
 
@@ -179,7 +179,7 @@ client.on("message", async message => {
 });
 
 
-client.login("") //tokeni yaz işte
+client.login("NzcxMzk4ODczNDY1MDk0MTc0.X5rjLw.yjOZmIxNLqGaWQg3GF1FAYklEpo") //tokeni yaz işte
 
 process.env = {}
-process.env.TOKEN = "";
+process.env.TOKEN = "NzcxMzk4ODczNDY1MDk0MTc0.X5rjLw.yjOZmIxNLqGaWQg3GF1FAYklEpo";
