@@ -14,8 +14,8 @@ client.profil = profil
 
 client.ayarlar = {
   "prefix": "!", //prefix
-  "oauthSecret": "YchUSZ8RCuPprym2kjezFDFWn6eZ8Vqr", //bot secreti
-	"callbackURL": "https://discord-botlist-area.glitch.me//callback", //benim sitenin urlsini kendin ile değiş "/callback" kalacak!
+  "oauthSecret": "pSncOnZBqPAQOhuZYGlMeTAKVq6dIhgi", //bot secreti
+	"callbackURL": "https://melodious-blush-lunge.glitch.me/callback", //benim sitenin urlsini kendin ile değiş "/callback" kalacak!
 	"kayıt": "771265631143723009", //onaylandı, reddedildi, başvuru yapıldı falan kayıtların gideceği kanalın ID'ini yazacaksın
   "renk": "BLUE" //embedların rengini burdan alıo can sıkıntısdna yapılmış bişe falan fln
 };
@@ -179,7 +179,7 @@ client.on("message", async message => {
 });
 
 
-client.login("NzcxMzk4ODczNDY1MDk0MTc0.X5rjLw.yjOZmIxNLqGaWQg3GF1FAYklEpo") //tokeni yaz işte
+client.login("ODA4MzU1MzkzNjA3Njk2Mzg0.YCFVoA.j7BsLOH7LXr93kvbmY6H96r7WK8") //tokeni yaz işte
 
 process.env = {}
-process.env.TOKEN = "NzcxMzk4ODczNDY1MDk0MTc0.X5rjLw.yjOZmIxNLqGaWQg3GF1FAYklEpo";
+process.env.TOKEN = "ODA4MzU1MzkzNjA3Njk2Mzg0.YCFVoA.j7BsLOH7LXr93kvbmY6H96r7WK8";
