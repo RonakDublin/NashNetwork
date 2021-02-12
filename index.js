@@ -14,18 +14,19 @@ client.profil = profil
 
 client.ayarlar = {
   "prefix": "!", //prefix
-  "oauthSecret": "pSncOnZBqPAQOhuZYGlMeTAKVq6dIhgi", //bot secreti
-	"callbackURL": "https://melodious-blush-lunge.glitch.me/callback", //benim sitenin urlsini kendin ile değiş "/callback" kalacak!
-	"kayıt": "771265631143723009", //onaylandı, reddedildi, başvuru yapıldı falan kayıtların gideceği kanalın ID'ini yazacaksın
+  "oauthSecret": "8X1uugHrKvM1n_g1It5b6Gk-hFcR7yXZ", //bot secreti
+	"callbackURL": "https://kindhearted-standing-arthropod.glitch.me/callback", //benim sitenin urlsini kendin ile değiş "/callback" kalacak!
+	"kayıt": "807274610852364298", //onaylandı, reddedildi, başvuru yapıldı falan kayıtların gideceği kanalın ID'ini yazacaksın
   "renk": "BLUE" //embedların rengini burdan alıo can sıkıntısdna yapılmış bişe falan fln
 };
 
 
 
-client.yetkililer = ['771265580266553344'] //tüm yetkililerin ıdleri gelcek array
-client.webyetkililer = ['771265580266553344'] //web yetkililerin ıdleri gelcek array
-client.sunucuyetkililer = ['771265578819911700'] //sunucu yetkililerin ıdleri gelcek array
+client.yetkililer = ['707263686305120384'] //tüm yetkililerin ıdleri gelcek array
+client.webyetkililer = ['807717342280548392'] //web yetkililerin ıdleri gelcek array
+client.sunucuyetkililer = ['807717342280548392'] //sunucu yetkililerin ıdleri gelcek array
 
+//["id", "id2"]
 //["id", "id2"]
 
 client.on('ready', async () => {
@@ -179,7 +180,7 @@ client.on("message", async message => {
 });
 
 
-client.login("ODA4MzU1MzkzNjA3Njk2Mzg0.YCFVoA.j7BsLOH7LXr93kvbmY6H96r7WK8") //tokeni yaz işte
+client.login("Nzk5NTcyMDYzNzgyMzA1ODAy.YAFhgw.wLpEkZzxAallV9AQtjYl2k3RvNk") //tokeni yaz işte
 
 process.env = {}
-process.env.TOKEN = "ODA4MzU1MzkzNjA3Njk2Mzg0.YCFVoA.j7BsLOH7LXr93kvbmY6H96r7WK8";
+process.env.TOKEN = "Nzk5NTcyMDYzNzgyMzA1ODAy.YAFhgw.wLpEkZzxAallV9AQtjYl2k3RvNk";
