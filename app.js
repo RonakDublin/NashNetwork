@@ -122,10 +122,6 @@ renderTemplate(res, req, "index.ejs");
   
   app.get("/alim", (req, res) => { renderTemplate (res, req, "alim.ejs") });
 
-app.get("/sertifika", (req, res) => {
-
-renderTemplate (res, req, "sertifika.ejs");
-});
 
 app.get("/hakkimizda", (req, res) => {
   
