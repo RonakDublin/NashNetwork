@@ -15,7 +15,7 @@ client.profil = profil
 client.ayarlar = {
   "prefix": "!", //prefix
   "oauthSecret": "8X1uugHrKvM1n_g1It5b6Gk-hFcR7yXZ", //bot secreti
-	"callbackURL": "https://www.myteriabotlist.cf/callback", //benim sitenin urlsini kendin ile değiş "/callback" kalacak!
+	"callbackURL": "https://bots.myteriabotlist.cf/callback", //benim sitenin urlsini kendin ile değiş "/callback" kalacak!
 	"kayıt": "807274610852364298", //onaylandı, reddedildi, başvuru yapıldı falan kayıtların gideceği kanalın ID'ini yazacaksın
   "renk": "BLUE" //embedların rengini burdan alıo can sıkıntısdna yapılmış bişe falan fln
 };
