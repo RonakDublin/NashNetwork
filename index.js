@@ -24,7 +24,9 @@ client.ayarlar = {
 
 client.yetkililer = ['707263686305120384'] //tüm yetkililerin ıdleri gelcek array
 client.webyetkililer = ['807717342280548392'] //web yetkililerin ıdleri gelcek array
-client.sunucuyetkililer = ['807717342280548392 '] //sunucu yetkililerin ıdleri gelcek array
+client.sunucuyetkililer1 = ['707263686305120384'] //sunucu yetkililerin ıdleri gelcek array
+client.sunucuyetkililer2 = ['766527134407458819'] //sunucu yetkililerin ıdleri gelcek array
+client.sunucuyetkililer3 = ['627543270985170958'] //sunucu yetkililerin ıdleri gelcek array
 
 //["id", "id2"]
 //["id", "id2"]
