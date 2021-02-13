@@ -182,7 +182,4 @@ client.on("message", async message => {
 });
 
 
-client.login("Nzk5NTcyMDYzNzgyMzA1ODAy.YAFhgw.wLpEkZzxAallV9AQtjYl2k3RvNk") //tokeni yaz işte
-
-process.env = {}
-process.env.TOKEN = "Nzk5NTcyMDYzNzgyMzA1ODAy.YAFhgw.wLpEkZzxAallV9AQtjYl2k3RvNk";
+client.login(process.env.token);
