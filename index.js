@@ -22,11 +22,11 @@ client.ayarlar = {
 
 
 
-client.yetkililer = ['707263686305120384,'] //tüm yetkililerin ıdleri gelcek
-client.webyetkililer = ['707263686305120384,627543270985170958'] //web yetkililerin ıdleri gelcek 
-client.sunucuyetkililer = ['707263686305120384,627543270985170958'] //sunucu yetkililerin ıdleri gelcek 
-client.sunucuyetkililer = ['707263686305120384,627543270985170958'] //sunucu yetkililerin ıdleri gelcek
-client.yetkililer = ['627543270985170958'] //tüm yetkililerin ıdleri gelcek
+client.yetkililer = ["707263686305120384,627543270985170958"] //tüm yetkililerin ıdleri gelcek
+client.webyetkililer = ["707263686305120384,627543270985170958"] //web yetkililerin ıdleri gelcek 
+client.sunucuyetkililer = ["707263686305120384"] //sunucu yetkililerin ıdleri gelcek 
+client.sunucuyetkililer = ["707263686305120384"] //sunucu yetkililerin ıdleri gelcek
+client.yetkililer = ["627543270985170958,707263686305120384"] //tüm yetkililerin ıdleri gelcek
 //["id", "id2"]
 
 client.on('ready', async () => {
