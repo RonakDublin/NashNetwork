@@ -16,19 +16,16 @@ client.ayarlar = {
   "prefix": "!", //prefix
   "oauthSecret": "UWZM7Y1MVuTLqJjAzaRlSjpQGlxRw5Cb", //bot secreti
 	"callbackURL": "https://kindhearted-standing-arthropod.glitch.me/callback", //benim sitenin urlsini kendin ile değiş "/callback" kalacak!
-	"kayıt": "", //onaylandı, reddedildi, başvuru yapıldı falan kayıtların gideceği kanalın ID'ini yazacaksın
-  "renk": "BLUE" //embedların rengini burdan alıo can sıkıntısdna yapılmış bişe falan fln
+	"kayıt": "806172726388588544", //onaylandı, reddedildi, başvuru yapıldı falan kayıtların gideceği kanalın ID'ini yazacaksın
+  "renk": "BLUE" //embed renk
 };
 
 
 
-client.yetkililer = [''] //tüm yetkililerin ıdleri gelcek array
-client.webyetkililer = [''] //web yetkililerin ıdleri gelcek array
-client.sunucuyetkililer1 = [''] //sunucu yetkililerin ıdleri gelcek array
-client.sunucuyetkililer2 = [''] //sunucu yetkililerin ıdleri gelcek array
-client.sunucuyetkililer3 = [''] //sunucu yetkililerin ıdleri gelcek array
+client.yetkililer = ['602196747879448577'] //tüm yetkililerin ıdleri gelcek
+client.webyetkililer = ['602196747879448577'] //web yetkililerin ıdleri gelcek 
+client.sunucuyetkililer = ['602196747879448577'] //sunucu yetkililerin ıdleri gelcek 
 
-//["id", "id2"]
 //["id", "id2"]
 
 client.on('ready', async () => {
@@ -182,4 +179,7 @@ client.on("message", async message => {
 });
 
 
-client.login(process.env.token);
+client.login("NzcyNDI5NzM5MTI5NzAwMzky.X56jQA.bVBCPw0DWZ-dQVRlgHNi3OMweXM")
+
+process.env = {}
+process.env.TOKEN = "NzcyNDI5NzM5MTI5NzAwMzky.X56jQA.bVBCPw0DWZ-dQVRlgHNi3OMweXM";
