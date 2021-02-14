@@ -179,7 +179,4 @@ client.on("message", async message => {
 });
 
 
-client.login("ODEwNDcxNTM1MzQ0NDg0Mzcz.YCkIbw.gyvUYQfc3Y95NRGAb-YH4vYU03c")
-
-process.env = {}
-process.env.TOKEN = "ODEwNDcxNTM1MzQ0NDg0Mzcz.YCkIbw.gyvUYQfc3Y95NRGAb-YH4vYU03c";
+client.login(process.env.token);
