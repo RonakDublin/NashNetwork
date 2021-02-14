@@ -13,9 +13,9 @@ let profil = JSON.parse(fs.readFileSync('./profil.json', 'utf8'))
 client.profil = profil
 
 client.ayarlar = {
-  "prefix": "", //prefix
-  "oauthSecret": "", //bot secreti
-	"callbackURL": "", //benim sitenin urlsini kendin ile değiş "/callback" kalacak!
+  "prefix": "!", //prefix
+  "oauthSecret": "UWZM7Y1MVuTLqJjAzaRlSjpQGlxRw5Cb", //bot secreti
+	"callbackURL": "https://kindhearted-standing-arthropod.glitch.me/callback", //benim sitenin urlsini kendin ile değiş "/callback" kalacak!
 	"kayıt": "", //onaylandı, reddedildi, başvuru yapıldı falan kayıtların gideceği kanalın ID'ini yazacaksın
   "renk": "BLUE" //embedların rengini burdan alıo can sıkıntısdna yapılmış bişe falan fln
 };

@@ -58,7 +58,7 @@ h6:link, h6:visited {
 }
 
 ::-webkit-scrollbar-track {
-  background: #f1f1f1; 
+  background: yellow; 
 }
  
 ::-webkit-scrollbar-thumb {
@@ -182,7 +182,7 @@ margin-bottom: 20px !important;
 }
 
 .footer #kutu a {
-	color: white;
+	color: black;
 }
 
 .footer #kutu b {
@@ -398,7 +398,7 @@ tr:nth-child(even) {
 }
 
 .etiket {
-    color: white;
+    color: black;
     background-color: grey;
     padding: 8px 11px;
     border-radius: 2px;
@@ -518,7 +518,7 @@ input[type=search] {
 
 .butonss{
 background: #1976d2;
-    color: white;
+    color: red;
     padding: 14px 20px;
     margin: 8px 0;
     border: none;
