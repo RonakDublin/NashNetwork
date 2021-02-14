@@ -13,20 +13,20 @@ let profil = JSON.parse(fs.readFileSync('./profil.json', 'utf8'))
 client.profil = profil
 
 client.ayarlar = {
-  "prefix": "!", //prefix
-  "oauthSecret": "8X1uugHrKvM1n_g1It5b6Gk-hFcR7yXZ", //bot secreti
-	"callbackURL": "https://bots.myteriabotlist.cf/callback", //benim sitenin urlsini kendin ile değiş "/callback" kalacak!
-	"kayıt": "807274610852364298", //onaylandı, reddedildi, başvuru yapıldı falan kayıtların gideceği kanalın ID'ini yazacaksın
+  "prefix": "", //prefix
+  "oauthSecret": "", //bot secreti
+	"callbackURL": "", //benim sitenin urlsini kendin ile değiş "/callback" kalacak!
+	"kayıt": "", //onaylandı, reddedildi, başvuru yapıldı falan kayıtların gideceği kanalın ID'ini yazacaksın
   "renk": "BLUE" //embedların rengini burdan alıo can sıkıntısdna yapılmış bişe falan fln
 };
 
 
 
-client.yetkililer = ['707263686305120384'] //tüm yetkililerin ıdleri gelcek array
-client.webyetkililer = ['807717342280548392'] //web yetkililerin ıdleri gelcek array
-client.sunucuyetkililer1 = ['707263686305120384'] //sunucu yetkililerin ıdleri gelcek array
-client.sunucuyetkililer2 = ['766527134407458819'] //sunucu yetkililerin ıdleri gelcek array
-client.sunucuyetkililer3 = ['627543270985170958'] //sunucu yetkililerin ıdleri gelcek array
+client.yetkililer = [''] //tüm yetkililerin ıdleri gelcek array
+client.webyetkililer = [''] //web yetkililerin ıdleri gelcek array
+client.sunucuyetkililer1 = [''] //sunucu yetkililerin ıdleri gelcek array
+client.sunucuyetkililer2 = [''] //sunucu yetkililerin ıdleri gelcek array
+client.sunucuyetkililer3 = [''] //sunucu yetkililerin ıdleri gelcek array
 
 //["id", "id2"]
 //["id", "id2"]
