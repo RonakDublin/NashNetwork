@@ -13,10 +13,10 @@ let profil = JSON.parse(fs.readFileSync('./profil.json', 'utf8'))
 client.profil = profil
 
 client.ayarlar = {
-  "prefix": "!", //prefix
-  "oauthSecret": "rUqP9DIvva8p-oSAplHk9HA5AKWwIjgh", //bot secreti
-	"callbackURL": "https://kindhearted-standing-arthropod.glitch.me/callback", //benim sitenin urlsini kendin ile değiş "/callback" kalacak!
-	"kayıt": "806172726388588544", //onaylandı, reddedildi, başvuru yapıldı falan kayıtların gideceği kanalın ID'ini yazacaksın
+  "prefix": "", //prefix
+  "oauthSecret": "", //bot secreti
+	"callbackURL": "", //benim sitenin urlsini kendin ile değiş "/callback" kalacak!
+	"kayıt": "", //onaylandı, reddedildi, başvuru yapıldı falan kayıtların gideceği kanalın ID'ini yazacaksın
   "renk": "BLUE" //embed renk
 };
 
