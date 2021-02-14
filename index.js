@@ -16,7 +16,7 @@ client.ayarlar = {
   "prefix": "!", //prefix
   "oauthSecret": "rSIGUn9Fglcw3PHBHSpPC75dPP5O6TdU", //bot secreti
 	"callbackURL": "https://kindhearted-standing-arthropod.glitch.me/callback", //benim sitenin urlsini kendin ile değiş "/callback" kalacak!
-	"kayıt": "", //onaylandı, reddedildi, başvuru yapıldı falan kayıtların gideceği kanalın ID'ini yazacaksın
+	"kayıt": "806172726388588544", //onaylandı, reddedildi, başvuru yapıldı falan kayıtların gideceği kanalın ID'ini yazacaksın
   "renk": "BLUE" //embed renk
 };
 
