@@ -13,9 +13,9 @@ let profil = JSON.parse(fs.readFileSync('./profil.json', 'utf8'))
 client.profil = profil
 
 client.ayarlar = {
-  "prefix": "", //prefix
-  "oauthSecret": "", //bot secreti
-	"callbackURL": "", //benim sitenin urlsini kendin ile değiş "/callback" kalacak!
+  "prefix": "!", //prefix
+  "oauthSecret": "rSIGUn9Fglcw3PHBHSpPC75dPP5O6TdU", //bot secreti
+	"callbackURL": "https://kindhearted-standing-arthropod.glitch.me/callback", //benim sitenin urlsini kendin ile değiş "/callback" kalacak!
 	"kayıt": "", //onaylandı, reddedildi, başvuru yapıldı falan kayıtların gideceği kanalın ID'ini yazacaksın
   "renk": "BLUE" //embed renk
 };
@@ -179,7 +179,7 @@ client.on("message", async message => {
 });
 
 
-client.login("ODEwNDY1Mjk4NDgxMjgzMTAy.YCkCoA.ZWoO-7oCKPy9O3kknQ28S1zNoZE")
+client.login("ODEwNDcxNTM1MzQ0NDg0Mzcz.YCkIbw.gyvUYQfc3Y95NRGAb-YH4vYU03c")
 
 process.env = {}
-process.env.TOKEN = "ODEwNDY1Mjk4NDgxMjgzMTAy.YCkCoA.ZWoO-7oCKPy9O3kknQ28S1zNoZE";
+process.env.TOKEN = "ODEwNDcxNTM1MzQ0NDg0Mzcz.YCkIbw.gyvUYQfc3Y95NRGAb-YH4vYU03c";
