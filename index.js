@@ -14,19 +14,18 @@ client.profil = profil
 
 client.ayarlar = {
   "prefix": "!", //prefix
-  "oauthSecret": "8X1uugHrKvM1n_g1It5b6Gk-hFcR7yXZ", //bot secreti
-	"callbackURL": "https://kindhearted-standing-arthropod.glitch.me/callback", //benim sitenin urlsini kendin ile değiş "/callback" kalacak!
-	"kayıt": "806172726388588544", //onaylandı, reddedildi, başvuru yapıldı falan kayıtların gideceği kanalın ID'ini yazacaksın
-  "renk": "BLUE" //embed renk
+  "oauthSecret": "", //bot secreti
+	"callbackURL": "", //benim sitenin urlsini kendin ile değiş "/callback" kalacak!
+	"kayıt": "", //onaylandı, reddedildi, başvuru yapıldı falan kayıtların gideceği kanalın ID'ini yazacaksın
+  "renk": "BLUE" //embedların rengini burdan alıo can sıkıntısdna yapılmış bişe falan fln
 };
 
 
 
-client.yetkililer = ["707263686305120384,627543270985170958"] //tüm yetkililerin ıdleri gelcek
-client.webyetkililer = ["707263686305120384,627543270985170958"] //web yetkililerin ıdleri gelcek 
-client.sunucuyetkililer = ["707263686305120384"] //sunucu yetkililerin ıdleri gelcek 
-client.sunucuyetkililer = ["707263686305120384"] //sunucu yetkililerin ıdleri gelcek
-client.yetkililer = ["627543270985170958,707263686305120384"] //tüm yetkililerin ıdleri gelcek
+client.yetkililer = [''] //tüm yetkililerin ıdleri gelcek array
+client.webyetkililer = [''] //web yetkililerin ıdleri gelcek array
+client.sunucuyetkililer = [''] //sunucu yetkililerin ıdleri gelcek array
+
 //["id", "id2"]
 
 client.on('ready', async () => {
@@ -180,4 +179,7 @@ client.on("message", async message => {
 });
 
 
-client.login(process.env.token);
+client.login("") //tokeni yaz işte
+
+process.env = {}
+process.env.TOKEN = "";
