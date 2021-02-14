@@ -14,7 +14,7 @@ client.profil = profil
 
 client.ayarlar = {
   "prefix": "!", //prefix
-  "oauthSecret": "rSIGUn9Fglcw3PHBHSpPC75dPP5O6TdU", //bot secreti
+  "oauthSecret": "8X1uugHrKvM1n_g1It5b6Gk-hFcR7yXZ", //bot secreti
 	"callbackURL": "https://kindhearted-standing-arthropod.glitch.me/callback", //benim sitenin urlsini kendin ile değiş "/callback" kalacak!
 	"kayıt": "806172726388588544", //onaylandı, reddedildi, başvuru yapıldı falan kayıtların gideceği kanalın ID'ini yazacaksın
   "renk": "BLUE" //embed renk
@@ -22,10 +22,11 @@ client.ayarlar = {
 
 
 
-client.yetkililer = ['602196747879448577'] //tüm yetkililerin ıdleri gelcek
-client.webyetkililer = ['602196747879448577'] //web yetkililerin ıdleri gelcek 
-client.sunucuyetkililer = ['602196747879448577'] //sunucu yetkililerin ıdleri gelcek 
-
+client.yetkililer = ['707263686305120384,'] //tüm yetkililerin ıdleri gelcek
+client.webyetkililer = ['707263686305120384,627543270985170958'] //web yetkililerin ıdleri gelcek 
+client.sunucuyetkililer = ['707263686305120384,627543270985170958'] //sunucu yetkililerin ıdleri gelcek 
+client.sunucuyetkililer = ['707263686305120384,627543270985170958'] //sunucu yetkililerin ıdleri gelcek
+client.yetkililer = ['627543270985170958'] //tüm yetkililerin ıdleri gelcek
 //["id", "id2"]
 
 client.on('ready', async () => {
