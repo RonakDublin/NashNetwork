@@ -14,9 +14,9 @@ client.profil = profil
 
 client.ayarlar = {
   "prefix": "!", //prefix
-  "oauthSecret": "", //bot secreti
-	"callbackURL": "", //benim sitenin urlsini kendin ile değiş "/callback" kalacak!
-	"kayıt": "", //onaylandı, reddedildi, başvuru yapıldı falan kayıtların gideceği kanalın ID'ini yazacaksın
+  "oauthSecret": "rUqP9DIvva8p-oSAplHk9HA5AKWwIjgh", //bot secreti
+	"callbackURL": "https://kindhearted-standing-arthropod.glitch.me/callback", //benim sitenin urlsini kendin ile değiş "/callback" kalacak!
+	"kayıt": "806172726388588544", //onaylandı, reddedildi, başvuru yapıldı falan kayıtların gideceği kanalın ID'ini yazacaksın
   "renk": "BLUE" //embed renk
 };
 
@@ -179,7 +179,7 @@ client.on("message", async message => {
 });
 
 
-client.login("NzcyNDI5NzM5MTI5NzAwMzky.X56jQA.bVBCPw0DWZ-dQVRlgHNi3OMweXM")
+client.login("ODEwNDY1Mjk4NDgxMjgzMTAy.YCkCoA.ZWoO-7oCKPy9O3kknQ28S1zNoZE")
 
 process.env = {}
-process.env.TOKEN = "NzcyNDI5NzM5MTI5NzAwMzky.X56jQA.bVBCPw0DWZ-dQVRlgHNi3OMweXM";
+process.env.TOKEN = "ODEwNDY1Mjk4NDgxMjgzMTAy.YCkCoA.ZWoO-7oCKPy9O3kknQ28S1zNoZE";
