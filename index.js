@@ -146,7 +146,7 @@ client.on("message", async message => {
 		}
 		if (cmd.conf.permLevel === 4) {
 			const x = await client.fetchApplication()
-      var arr = [x.owner.id, '276829048943149057','348097494548348940','315218945693188098']
+      var arr = [x.owner.id, '611170675750862848','692731610214432819','763077116945760296']
 			if (!arr.includes(message.author.id)) {
 				const embed = new Discord.RichEmbed()
 					.setDescription(`Yetkin yetersiz.`)
