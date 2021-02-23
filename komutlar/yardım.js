@@ -8,7 +8,7 @@ exports.run = async (client, message, args) => {
   .addField("Sistemin amacı nedir? Sistem ne işe yaramaktadır?", "Gerekli bilgiyi [buraya tıklayarak](https://custom-bot-list-web.glitch.me/hakkimizda) görebilirsiniz.")
 	.addField("Bot nasıl ekleyeceğim?", "[Buraya tıklayarak](https://custom-bot-list-web.glitch.me/botlar) bot ekleyebileceğiniz yere ışınlanabilirsiniz.")
   .addField("Sistemdeki tüm botları nereden görebilirim?", "[Buraya tıklayarak](https://custom-bot-list-web.glitch.me/botlar) görebilirsiniz.")
-  .addField("Kullanıcı panelinde neler yapılabilir?", "Kullanıcı panelinde sistemdeki botlarınızın profilini/başvurusunu düzenleyebilir ve botlarınızı sistemden silebilirsiniz. \nKullanıcı paneline gitmek için [buraya tıklayabilirsiniz.](https://worldbotlist.ml/panel)")
+  .addField("Kullanıcı panelinde neler yapılabilir?", "Kullanıcı panelinde sistemdeki botlarınızın profilini/başvurusunu düzenleyebilir ve botlarınızı sistemden silebilirsiniz. \nKullanıcı paneline gitmek için [buraya tıklayabilirsiniz.](hhttps://custom-bot-list-web.glitch.me/kullanici/panel)")
   message.channel.send({embed: embed})
   
 };
