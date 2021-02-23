@@ -4,7 +4,7 @@ exports.run = async (client, message, args) => {
 	//kendi URL'lerini eklersn :D
   var embed = new Discord.RichEmbed()
   .setColor('RANDOM')
-  .setAuthor("World Bot List", client.user.avatarURL)
+  .setAuthor("Custom Bot List", client.user.avatarURL)
   .addField("Sistemin amacı nedir? Sistem ne işe yaramaktadır?", "Gerekli bilgiyi [buraya tıklayarak](https://worldbotlist.ml/hakkimizda) görebilirsiniz.")
 	.addField("Bot nasıl ekleyeceğim?", "[Buraya tıklayarak](https://worldbotlist.ml/botekle) bot ekleyebileceğiniz yere ışınlanabilirsiniz.")
   .addField("Sistemdeki tüm botları nereden görebilirim?", "[Buraya tıklayarak](https://worldbotlist.ml/botlar) görebilirsiniz.")
