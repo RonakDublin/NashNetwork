@@ -22,9 +22,9 @@ client.ayarlar = {
 
 
 
-client.yetkililer = ['611170675750862848,692731610214432819,763077116945760296'] //tüm yetkililerin ıdleri gelcek array
-client.webyetkililer = ['692731610214432819,763077116945760296,611170675750862848'] //web yetkililerin ıdleri gelcek array
-client.sunucuyetkililer = ['692731610214432819,763077116945760296,611170675750862848'] //sunucu yetkililerin ıdleri gelcek array
+client.yetkililer = ['611170675750862848'] //tüm yetkililerin ıdleri gelcek array
+client.webyetkililer = ['611170675750862848'] //web yetkililerin ıdleri gelcek array
+client.sunucuyetkililer = ['611170675750862848'] //sunucu yetkililerin ıdleri gelcek array
 
 //["id", "id2"]
 
