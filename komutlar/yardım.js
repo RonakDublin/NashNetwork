@@ -5,10 +5,9 @@ exports.run = async (client, message, args) => {
   var embed = new Discord.RichEmbed()
   .setColor('RANDOM')
   .setAuthor("Custom Bot List", client.user.avatarURL)
-  .addField("Sistemin amacı nedir? Sistem ne işe yaramaktadır?", "Gerekli bilgiyi [buraya tıklayarak](https://worldbotlist.ml/hakkimizda) görebilirsiniz.")
-	.addField("Bot nasıl ekleyeceğim?", "[Buraya tıklayarak](https://worldbotlist.ml/botekle) bot ekleyebileceğiniz yere ışınlanabilirsiniz.")
-  .addField("Sistemdeki tüm botları nereden görebilirim?", "[Buraya tıklayarak](https://worldbotlist.ml/botlar) görebilirsiniz.")
-  .addField("Sertifika ne işe yarar? Nasıl alınır?", "[Buraya tıklayarak](https://worldbotlist.ml/sertifika) görebilirsiniz.")
+  .addField("Sistemin amacı nedir? Sistem ne işe yaramaktadır?", "Gerekli bilgiyi [buraya tıklayarak](https://custom-bot-list-web.glitch.me/hakkimizda) görebilirsiniz.")
+	.addField("Bot nasıl ekleyeceğim?", "[Buraya tıklayarak](https://custom-bot-list-web.glitch.me/botlar) bot ekleyebileceğiniz yere ışınlanabilirsiniz.")
+  .addField("Sistemdeki tüm botları nereden görebilirim?", "[Buraya tıklayarak](https://custom-bot-list-web.glitch.me/botlar) görebilirsiniz.")
   .addField("Kullanıcı panelinde neler yapılabilir?", "Kullanıcı panelinde sistemdeki botlarınızın profilini/başvurusunu düzenleyebilir ve botlarınızı sistemden silebilirsiniz. \nKullanıcı paneline gitmek için [buraya tıklayabilirsiniz.](https://worldbotlist.ml/panel)")
   message.channel.send({embed: embed})
   
