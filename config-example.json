@@ -30,7 +30,7 @@
         "prefix": "!"
     },
     "web": {
-        "domain_with_protocol": "",
+        "domain_with_protocol": "https://custom-bot-list-web.glitch.me/",
         "port": 80,
         "ratelimit": 30,
         "recaptcha_v2": {
