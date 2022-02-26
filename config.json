@@ -25,8 +25,8 @@
     },
     "discord_client": {
         "id": "931355947878711296",
-        "secret": "HI1yY3V-1RZNMIYw-CHQx9BFAjVHcE86",
-        "token": "ODEzNzMwNDc5MzY2MjA5NTk3.YDTjkA.OQ84hyb3KAotRWeFD7N9dCiubLo",
+        "secret": "71963c57fe71ccc303d126a4c3279d3d946215641588b9857e5e3ba546d665e8",
+        "token": "OTMxMzU1OTQ3ODc4NzExMjk2.YeDO0Q.s2KVNMacP6iIqXywwAdqYoQD_RE",
         "prefix": "!"
     },
     "web": {
