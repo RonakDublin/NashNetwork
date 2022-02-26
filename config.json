@@ -2,17 +2,17 @@
     "mongo_url": "mongodb+srv://rodny_roblox:15022010@cluster0.lur6o.mongodb.net/myFirstDatabase?retryWrites=true&w=majority",
     "server": {
         "id": "928411529387331604",
-        "invite": "https://discord.gg/AjuwAmAHqT",
-        "mod_log_id": "813455506894618655",
-        "like_log": "813455506894618655",
+        "invite": "https://discord.gg/PhReBUTrtz",
+        "mod_log_id": "947042237102059521",
+        "like_log": "947042304886206514",
         "admin_user_ids": [734635787806703687],
         "role_ids": {
             "bot": "928429398460346409",
             "unverified": "947040254211285032",
             "verified": "947040397727764501",
 
-            "bot_developer": "611170675750862848",
-            "bot_verifier": "611170675750862848"
+            "bot_developer": "947041212198694972",
+            "bot_verifier": "947041347485986856"
         }
     },
     "bot_options": {
